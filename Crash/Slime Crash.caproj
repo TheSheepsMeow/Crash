@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Crash</name>
+    <name>Slime Crash</name>
     <description></description>
-    <version>0.1</version>
+    <version>0.02</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
@@ -189,7 +189,7 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\Pitchfork\Desktop\tilinesheeps.png" />
             </object-type>
-            <object-type name="thesheepsmeow" sid="288718553732221">
+            <object-type name="player" sid="288718553732221">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429248677603925" speed="5">
@@ -233,23 +233,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="thesheepsmeow2" sid="618612625530446">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="251792205376044" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Bullet" sid="898031043574274">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749366648789334" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Audio" sid="536628271972109">
@@ -271,16 +254,96 @@
                 <plugin id="LocalStorage" />
             </object-type>
         </object-folder>
-        <object-type name="Food" sid="890914584029197">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="enemies">
+            <object-type name="enemy3" sid="224135893057729">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="153698493574547" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="840880064663025">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730169153841417" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemy2" sid="389419640177254">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="934479167812857" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="714009229075379">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="917084649404339" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemyBasic" sid="618612625530446">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="251792205376044" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="898031043574274">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749366648789334" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="collectibles">
+            <object-type name="Food" sid="890914584029197">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Food2" sid="122265539685807">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211983204259089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
-    <families />
+    <families>
+        <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
+            <members>
+                <member>enemy2</member>
+                <member>enemy3</member>
+                <member>enemyBasic</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="hp" sid="156463112869726" type="number" />
+            </instance-variables>
+        </family>
+        <family name="familyCollectibles" plugin-id="Sprite" sid="613070847714933">
+            <members>
+                <member>Food</member>
+                <member>Food2</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Loader.xml</layout>
         <layout>Title.xml</layout>
@@ -291,6 +354,9 @@
         <event-sheet>Title.xml</event-sheet>
         <event-sheet>Loader.xml</event-sheet>
         <event-sheet>LocalStorage.xml</event-sheet>
+        <event-sheet>Player.xml</event-sheet>
+        <event-sheet>Collectibles.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

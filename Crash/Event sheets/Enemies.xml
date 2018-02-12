@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies</name>
+    <events>
+        <event-group description="" sid="306964845839215" title="Enemies">
+            <sub-events>
+                <event-block sid="687453877712682">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="762271398607327" type="player">
+                            <param id="0" name="Object">enemyBasic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="906960334512650" type="System">
+                            <param id="0" name="Layout">&quot;Title&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913470776723985">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="188214979477712" title="Enemy Spawning">
+            <sub-events>
+                <event-block sid="634684996756896">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="457348907302327" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="921653874471346" type="System">
+                            <param id="0" name="Object to create">enemyBasic</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(0, LayoutWidth)</param>
+                            <param id="3" name="Y">random(0, LayoutHeight)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944072496785893">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="495817932572432" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="506757887092685" type="enemyBasic">
+                            <param id="0" name="Speed">50 * enemyBasic.speedMultiplier</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881643023857934">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="566113864106714" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="973393903298345" type="enemyBasic">
+                            <param id="0" name="Angle">angle(enemyBasic.X, enemyBasic.Y, player.X,player.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="334000867435773">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="861234801463557" type="System">
+                            <param id="0" name="First value">score % 5</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="743961790776667" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="210688909661323" type="enemyBasic">
+                            <param id="0" name="Instance variable">speedMultiplier</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

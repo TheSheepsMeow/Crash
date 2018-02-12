@@ -281,7 +281,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="thesheepsmeow" uid="27">
+                <instance type="player" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

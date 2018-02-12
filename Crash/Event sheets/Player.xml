@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player</name>
+    <events>
+        <event-group description="" sid="238474684588838" title="Player">
+            <sub-events>
+                <event-block sid="687685888277508">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="950150180066253">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="149375522002498">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="640778642626939" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="219252675683117" type="player">
+                            <param id="0" name="X">lerp(player.X, Touch.X, 0.05)</param>
+                            <param id="1" name="Y">lerp(player.y, Touch.Y, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="719482668405149">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="854532106461874" title="Player Animations">
+            <sub-events>
+                <event-block sid="388681732112429">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="523056473116627">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="801849547324201">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="820120528275727">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="438173811917479">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
