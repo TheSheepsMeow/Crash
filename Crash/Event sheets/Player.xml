@@ -3,12 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
+        <variable constant="0" name="playerIsAlive" sid="814161027637276" static="0" type="number">1</variable>
         <event-group description="" sid="238474684588838" title="Player">
             <sub-events>
-                <event-block sid="687685888277508">
-                    <conditions />
-                    <actions />
-                </event-block>
                 <event-block sid="950150180066253">
                     <conditions />
                     <actions />
@@ -16,6 +13,11 @@
                 <event-block sid="149375522002498">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="640778642626939" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="659520651035642" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="219252675683117" type="player">
@@ -24,7 +26,73 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="719482668405149">
+                <event-block sid="900616733334356">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>player death</comment>
+                <event-block sid="609406811271530">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="444533060108970" type="player">
+                            <param id="0" name="Object">familyEnemies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="970321417510320" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="774013741243600" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="318243171607919" type="System">
+                            <param id="0" name="Time scale">0.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="821089408183341" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="243400738175246" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="614157154601724" type="System">
+                            <param id="0" name="Layout">&quot;Title&quot;</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="932262692733264" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="908301246088526" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="597810617408643" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="103541717360190" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="985707615188406" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="688435343736866" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="215471142168476" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713273681755523">
                     <conditions />
                     <actions />
                 </event-block>
@@ -32,6 +100,7 @@
         </event-group>
         <event-group description="" sid="854532106461874" title="Player Animations">
             <sub-events>
+                <comment>use an invisible square for the player&apos;s hurtbox. pin a separate sprite object that contains all the player animations.</comment>
                 <event-block sid="388681732112429">
                     <conditions />
                     <actions />
@@ -49,6 +118,31 @@
                     <actions />
                 </event-block>
                 <event-block sid="438173811917479">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="288326930066547" title="Player Trail">
+            <sub-events>
+                <comment>trail goes here. </comment>
+                <event-block sid="724684683081210">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="247313196494517">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="847960657155215">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="936481202709727">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="796824566410754">
                     <conditions />
                     <actions />
                 </event-block>
