@@ -191,6 +191,9 @@
             </object-type>
             <object-type name="player" sid="288718553732221">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Immortal" sid="446829324375392" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429248677603925" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
@@ -308,7 +311,7 @@
             </object-type>
         </object-folder>
         <object-folder name="collectibles">
-            <object-type name="Food" sid="890914584029197">
+            <object-type name="Candy" sid="890914584029197">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
@@ -316,10 +319,29 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Food2" sid="122265539685807">
+            <object-type name="InvulCandy" sid="122265539685807">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Duration" sid="772512961530565" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211983204259089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TimeCandy" sid="377631333468538">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="AoeCandy" sid="787805027562844">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404225209679727" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -339,8 +361,10 @@
         </family>
         <family name="familyCollectibles" plugin-id="Sprite" sid="613070847714933">
             <members>
-                <member>Food</member>
-                <member>Food2</member>
+                <member>AoeCandy</member>
+                <member>Candy</member>
+                <member>InvulCandy</member>
+                <member>TimeCandy</member>
             </members>
         </family>
     </families>

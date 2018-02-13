@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collectibles</name>
     <events>
+        <variable constant="0" name="SpawnChance" sid="876138984674661" static="0" type="number">0</variable>
         <event-group description="" sid="390561440763992" title="Collectibles">
             <sub-events>
                 <event-block sid="668151957664748">
@@ -10,28 +11,128 @@
                     <actions />
                 </event-block>
                 <event-block sid="484536606783543">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="183650347343969">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="950318841157930" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
+                        <condition id="-6" name="Every X seconds" sid="456737036272764" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="489879323942515" type="System">
-                            <param id="0" name="Object to create">Food</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">random(0, LayoutWidth)</param>
-                            <param id="3" name="Y">random(0, LayoutHeight)</param>
+                        <action id="-9" name="Set value" sid="165123913076893" type="System">
+                            <param id="0" name="Variable">SpawnChance</param>
+                            <param id="1" name="Value">random(1, 101)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <comment>80% chance of getting a regular candy</comment>
+                        <event-block sid="183650347343969">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="950318841157930" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="833071158328879" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">80</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="489879323942515" type="System">
+                                    <param id="0" name="Object to create">Candy</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(0, LayoutWidth)</param>
+                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>10% chance of getting a Time Candy</comment>
+                        <event-block sid="214575669343445">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="415189771666977" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">80</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="117297591609470" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="115732744997961" type="System">
+                                    <param id="0" name="Object to create">TimeCandy</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(0, LayoutWidth)</param>
+                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>5% chance of getting an aoe candy</comment>
+                        <event-block sid="202045020080364">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="590821991339531" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="168096436073640" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">95</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="851801528052550" type="System">
+                                    <param id="0" name="Object to create">AoeCandy</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(0, LayoutWidth)</param>
+                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>5% chance of getting a InvulCandy</comment>
+                        <event-block sid="697358806036475">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="348176949432633" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">95</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="178946369440662" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="468373886994806" type="System">
+                                    <param id="0" name="Object to create">InvulCandy</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(0, LayoutWidth)</param>
+                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301961893920813">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
+                <event-block sid="189175171892112">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Regular candy that gives points" sid="751510562931491" title="Candy">
+            <sub-events>
                 <event-block sid="848024007356024">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="244388918088032" type="player">
-                            <param id="0" name="Object">Food</param>
+                            <param id="0" name="Object">Candy</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -46,12 +147,194 @@
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="940923065980940" type="Food" />
+                        <action id="-9" name="Destroy" sid="940923065980940" type="Candy" />
                     </actions>
                 </event-block>
-                <event-block sid="189175171892112">
-                    <conditions />
-                    <actions />
+            </sub-events>
+        </event-group>
+        <event-group description="When picked up does AOE to enemies" sid="610405757655759" title="AoeCandy">
+            <sub-events>
+                <event-block sid="638491721706332">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="295350474351614" type="player">
+                            <param id="0" name="Object">AoeCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="557135488373415" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="809031071770137" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="208591308012196" type="AoeCandy" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="237318751183222">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="888116206251470" type="System">
+                                    <param id="0" name="Object">familyEnemies</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="526868538536846" type="familyEnemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Makes player invulnerable for a set time" sid="951026337973007" title="InvulCandy">
+            <sub-events>
+                <event-block sid="750301468028345">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="625590337760164" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="739918862574576" type="InvulCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="182188272882166" type="InvulCandy">
+                            <param id="0" name="Instance variable">Duration</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="325105571441881">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="248735855038799" type="InvulCandy">
+                                    <param id="0" name="Instance variable">Duration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="936487413711374" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="362245171070423" type="InvulCandy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="349819087000485">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="185997301522429" type="player">
+                            <param id="0" name="Object">InvulCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="399305968828604" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="597196015976761" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="821674437864825" type="InvulCandy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="106971077183523">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="430148438271887" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="917797208403325" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Slows down enemies" sid="794110627143077" title="TimeCandy">
+            <sub-events>
+                <event-block sid="940460205312788">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="445044893149090" type="player">
+                            <param id="0" name="Object">TimeCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="155368951484231" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="538832111760277" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="462493105948525" type="TimeCandy" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="811068347873723">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="774078806078882" type="System">
+                                    <param id="0" name="Object">enemyBasic</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="669196791434644" type="enemyBasic">
+                                    <param id="0" name="Speed">enemyBasic.Bullet.Speed/10</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="818022617982870" type="enemyBasic">
+                                    <param id="0" name="Instance variable">speedMultiplier</param>
+                                    <param id="1" name="Value">enemyBasic.speedMultiplier/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="459168175979864">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="162374513489479" type="System">
+                                    <param id="0" name="Object">enemy2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="338842263900915" type="enemy2">
+                                    <param id="0" name="Speed">enemy2.Bullet.Speed/10</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="736317557436794" type="enemy2">
+                                    <param id="0" name="Instance variable">speedMultiplier</param>
+                                    <param id="1" name="Value">enemy2.speedMultiplier/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="853429539854557">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="445237475924718" type="System">
+                                    <param id="0" name="Object">enemy3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="727497939059448" type="enemy3">
+                                    <param id="0" name="Speed">enemy3.Bullet.Speed/10</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="463731095380958" type="enemy3">
+                                    <param id="0" name="Instance variable">speedMultiplier</param>
+                                    <param id="1" name="Value">enemy3.speedMultiplier/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
