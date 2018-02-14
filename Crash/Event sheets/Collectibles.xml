@@ -40,7 +40,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="489879323942515" type="System">
                                     <param id="0" name="Object to create">Candy</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
                                     <param id="2" name="X">random(0, LayoutWidth)</param>
                                     <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
@@ -63,7 +63,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="115732744997961" type="System">
                                     <param id="0" name="Object to create">TimeCandy</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
                                     <param id="2" name="X">random(0, LayoutWidth)</param>
                                     <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
@@ -86,7 +86,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="851801528052550" type="System">
                                     <param id="0" name="Object to create">AoeCandy</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
                                     <param id="2" name="X">random(0, LayoutWidth)</param>
                                     <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
@@ -109,7 +109,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="468373886994806" type="System">
                                     <param id="0" name="Object to create">InvulCandy</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MG&quot;</param>
                                     <param id="2" name="X">random(0, LayoutWidth)</param>
                                     <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
@@ -140,12 +140,11 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="7" name="Play (by name)" sid="809548335462879" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Play" sid="717281945291399" type="Audio">
+                            <param id="0" name="Audio file">Start_sound_1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="940923065980940" type="Candy" />
                     </actions>
@@ -165,12 +164,11 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="7" name="Play (by name)" sid="809031071770137" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Play" sid="986376723313605" type="Audio">
+                            <param id="0" name="Audio file">Start_sound_2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="208591308012196" type="AoeCandy" />
                     </actions>
@@ -234,12 +232,11 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="7" name="Play (by name)" sid="597196015976761" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Play" sid="829973369790102" type="Audio">
+                            <param id="0" name="Audio file">Start_sound_2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="821674437864825" type="InvulCandy">
                             <param id="0" name="Visibility">0</param>
@@ -276,12 +273,11 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="7" name="Play (by name)" sid="538832111760277" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="0" name="Play" sid="524679142097073" type="Audio">
+                            <param id="0" name="Audio file">Start_sound_2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="462493105948525" type="TimeCandy" />
                     </actions>
