@@ -10,10 +10,18 @@
                     <conditions />
                     <actions />
                 </event-block>
+                <event-block sid="896101859801345">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="845621408979730">
+                    <conditions />
+                    <actions />
+                </event-block>
                 <event-block sid="149375522002498">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="640778642626939" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="659520651035642" type="System">
+                        <condition id="-14" name="Compare variable" sid="435365256748317" type="System">
                             <param id="0" name="Variable">playerIsAlive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -37,60 +45,83 @@
                             <param id="0" name="Object">familyEnemies</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="7" name="Play (by name)" sid="970321417510320" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="774013741243600" type="System">
-                            <param id="0" name="Variable">playerIsAlive</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="318243171607919" type="System">
-                            <param id="0" name="Time scale">0.2</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="821089408183341" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                        <action id="7" name="Play (by name)" sid="243400738175246" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">&quot;Start_sound_&quot; &amp; choose(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-25" name="Go to layout (by name)" sid="614157154601724" type="System">
-                            <param id="0" name="Layout">&quot;Title&quot;</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="932262692733264" type="System">
-                            <param id="0" name="Time scale">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="908301246088526" type="System">
-                            <param id="0" name="Variable">playerIsAlive</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-34" name="Set layer background color" sid="597810617408643" type="System">
-                            <param id="0" name="Layer">0</param>
-                            <param id="1" name="Color">rgb(0, 0, 0)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="103541717360190" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-34" name="Set layer background color" sid="985707615188406" type="System">
-                            <param id="0" name="Layer">0</param>
-                            <param id="1" name="Color">rgb(255, 255, 255)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="688435343736866" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-34" name="Set layer background color" sid="215471142168476" type="System">
-                            <param id="0" name="Layer">0</param>
-                            <param id="1" name="Color">rgb(0, 0, 0)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="543691425036775">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="544569970291723" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="517384110662683" type="camera">
+                                    <param id="0" name="Magnitude">80</param>
+                                    <param id="1" name="Duration">0.1</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="721447342284866" type="Audio">
+                                    <param id="0" name="Audio file">Start_sound_4</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="774013741243600" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="318243171607919" type="System">
+                                    <param id="0" name="Time scale">0.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="821089408183341" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="198161556507021" type="Audio">
+                                    <param id="0" name="Audio file">Start_sound_5</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="614157154601724" type="System">
+                                    <param id="0" name="Layout">&quot;Title&quot;</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="932262692733264" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="908301246088526" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="597810617408643" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="103541717360190" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="985707615188406" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="688435343736866" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="215471142168476" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="461753400187992">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="149679902989530" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="713273681755523">
                     <conditions />
@@ -106,14 +137,33 @@
                     <actions />
                 </event-block>
                 <event-block sid="523056473116627">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="419877545962262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="566994401505184" type="playerAnimations">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="694458240545128" type="playerAnimations">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="801849547324201">
                     <conditions />
                     <actions />
                 </event-block>
                 <event-block sid="820120528275727">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="652596492809073">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="220383785950046">
                     <conditions />
                     <actions />
                 </event-block>
@@ -125,22 +175,26 @@
         </event-group>
         <event-group description="" sid="288326930066547" title="Player Trail">
             <sub-events>
-                <comment>trail goes here. </comment>
+                <comment></comment>
                 <event-block sid="724684683081210">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="661591492182913" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Paste Object" sid="584313508501291" type="Canvas">
+                            <param id="0" name="object">player</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="247313196494517">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="847960657155215">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="936481202709727">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="434450257365909" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Fill canvas with color" sid="933299158825102" type="Canvas">
+                            <param id="0" name="color">&quot;rgba(127,255,127,0.075)&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="796824566410754">
                     <conditions />

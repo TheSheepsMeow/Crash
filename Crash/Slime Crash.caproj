@@ -2,7 +2,7 @@
 <c2project>
     <name>Slime Crash</name>
     <description></description>
-    <version>0.02</version>
+    <version>0.03</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
@@ -20,9 +20,13 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="R0J0hound" id="c2canvas" version="2">Canvas</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -194,10 +198,25 @@
                 <instance-variables>
                     <instance-variable name="Immortal" sid="446829324375392" type="boolean" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="358513802575233">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429248677603925" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429248677603925" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -236,6 +255,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="playerAnimations" sid="376314120194435">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="497257135318840">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391517918437510" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="system">
             <object-type name="Audio" sid="536628271972109">
@@ -270,8 +303,30 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730169153841417" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.121094" y="0.121094" />
+                                <point x="0.5" y="0.0507813" />
+                                <point x="0.867188" y="0.132813" />
+                                <point x="0.945313" y="0.5" />
+                                <point x="0.878906" y="0.878906" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.144531" y="0.855469" />
+                                <point x="0.0546875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.121094" y="0.121094" />
+                                <point x="0.5" y="0.0507813" />
+                                <point x="0.867188" y="0.132813" />
+                                <point x="0.945313" y="0.5" />
+                                <point x="0.878906" y="0.878906" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.144531" y="0.855469" />
+                                <point x="0.0546875" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -287,8 +342,30 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="917084649404339" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -304,8 +381,30 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749366648789334" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.226563" y="0.226563" />
+                                <point x="0.5" y="0.113281" />
+                                <point x="0.773438" y="0.226563" />
+                                <point x="0.894531" y="0.5" />
+                                <point x="0.78125" y="0.78125" />
+                                <point x="0.5" y="0.902344" />
+                                <point x="0.21875" y="0.78125" />
+                                <point x="0.105469" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.226563" y="0.226563" />
+                                <point x="0.5" y="0.113281" />
+                                <point x="0.773438" y="0.226563" />
+                                <point x="0.894531" y="0.5" />
+                                <point x="0.78125" y="0.78125" />
+                                <point x="0.5" y="0.902344" />
+                                <point x="0.21875" y="0.78125" />
+                                <point x="0.105469" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -314,7 +413,8 @@
             <object-type name="Candy" sid="890914584029197">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -325,7 +425,8 @@
                     <instance-variable name="Duration" sid="772512961530565" type="number" />
                 </instance-variables>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211983204259089" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211983204259089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -333,7 +434,8 @@
             <object-type name="TimeCandy" sid="377631333468538">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -341,12 +443,30 @@
             <object-type name="AoeCandy" sid="787805027562844">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404225209679727" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404225209679727" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="Canvas" sid="807400911943529">
+            <plugin id="c2canvas" />
+            <texture />
+        </object-type>
+        <object-type name="camera" sid="562414765747028">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="927208467938340">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="893051098609990" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
