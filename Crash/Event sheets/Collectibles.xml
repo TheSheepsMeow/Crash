@@ -181,6 +181,10 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="526868538536846" type="familyEnemies" />
+                                <action id="-10" name="Add to" sid="243875220833895" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -293,9 +297,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="669196791434644" type="enemyBasic">
-                                    <param id="0" name="Speed">enemyBasic.Bullet.Speed/10</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="818022617982870" type="enemyBasic">
                                     <param id="0" name="Instance variable">speedMultiplier</param>
                                     <param id="1" name="Value">enemyBasic.speedMultiplier/2</param>
@@ -309,9 +310,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="338842263900915" type="enemy2">
-                                    <param id="0" name="Speed">enemy2.Bullet.Speed/10</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="736317557436794" type="enemy2">
                                     <param id="0" name="Instance variable">speedMultiplier</param>
                                     <param id="1" name="Value">enemy2.speedMultiplier/2</param>
@@ -325,14 +323,84 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="727497939059448" type="enemy3">
-                                    <param id="0" name="Speed">enemy3.Bullet.Speed/10</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="463731095380958" type="enemy3">
                                     <param id="0" name="Instance variable">speedMultiplier</param>
                                     <param id="1" name="Value">enemy3.speedMultiplier/2</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="678885402268816">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="481719598571812" type="TimeCandy" />
+                        <condition id="-6" name="Every X seconds" sid="171964000969044" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="233593578307138" type="TimeCandy">
+                            <param id="0" name="Instance variable">Duration</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="862475625385251">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="340344317519705" type="TimeCandy">
+                                    <param id="0" name="Instance variable">Duration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="671315357754741" type="TimeCandy" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="569885458865166">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="608511699789003" type="System">
+                                            <param id="0" name="Object">enemyBasic</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="699277513989914" type="enemyBasic">
+                                            <param id="0" name="Instance variable">speedMultiplier</param>
+                                            <param id="1" name="Value">enemyBasic.speedMultiplier * 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="829625062495919">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="138783914817800" type="System">
+                                            <param id="0" name="Object">enemy2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="326158408986762" type="enemy2">
+                                            <param id="0" name="Instance variable">speedMultiplier</param>
+                                            <param id="1" name="Value">enemy2.speedMultiplier * 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="783449630937065">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="831869281677964" type="System">
+                                            <param id="0" name="Object">enemy3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="904034504232737" type="enemy3">
+                                            <param id="0" name="Instance variable">speedMultiplier</param>
+                                            <param id="1" name="Value">enemy3.speedMultiplier * 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="529901086727409">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

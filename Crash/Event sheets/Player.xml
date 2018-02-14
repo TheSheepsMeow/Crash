@@ -118,6 +118,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-10" name="Add to" sid="879478457013424" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
                             </actions>
                         </event-block>
