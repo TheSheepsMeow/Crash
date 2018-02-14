@@ -191,43 +191,12 @@
         </event-group>
         <event-group description="Makes player invulnerable for a set time" sid="951026337973007" title="InvulCandy">
             <sub-events>
-                <event-block sid="750301468028345">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="625590337760164" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="739918862574576" type="InvulCandy" />
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="182188272882166" type="InvulCandy">
-                            <param id="0" name="Instance variable">Duration</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="325105571441881">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="248735855038799" type="InvulCandy">
-                                    <param id="0" name="Instance variable">Duration</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="936487413711374" type="player">
-                                    <param id="0" name="Instance variable">Immortal</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="362245171070423" type="InvulCandy" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="349819087000485">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="185997301522429" type="player">
                             <param id="0" name="Object">InvulCandy</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="162141336018578" type="InvulCandy" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="399305968828604" type="System">
@@ -261,6 +230,38 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="750301468028345">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="625590337760164" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="739918862574576" type="InvulCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="182188272882166" type="InvulCandy">
+                            <param id="0" name="Instance variable">Duration</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="325105571441881">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="248735855038799" type="InvulCandy">
+                                    <param id="0" name="Instance variable">Duration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="936487413711374" type="player">
+                                    <param id="0" name="Instance variable">Immortal</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="362245171070423" type="InvulCandy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="Slows down enemies" sid="794110627143077" title="TimeCandy">
@@ -270,6 +271,7 @@
                         <condition id="0" name="On collision with another object" sid="445044893149090" type="player">
                             <param id="0" name="Object">TimeCandy</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="443565285226248" type="TimeCandy" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="155368951484231" type="System">
@@ -283,7 +285,9 @@
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="462493105948525" type="TimeCandy" />
+                        <action id="-15" name="Set visible" sid="462493105948525" type="TimeCandy">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="811068347873723">
