@@ -26,6 +26,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="283521332439015" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="219252675683117" type="player">
@@ -33,10 +38,6 @@
                             <param id="1" name="Y">lerp(player.y, Touch.Y, 0.05)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="900616733334356">
-                    <conditions />
-                    <actions />
                 </event-block>
                 <comment>player death</comment>
                 <event-block sid="609406811271530">
@@ -122,6 +123,11 @@
                                     <param id="0" name="Variable">score</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="799301852661208" type="camera">
+                                    <param id="0" name="Magnitude">10</param>
+                                    <param id="1" name="Duration">0.1</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
                             </actions>
                         </event-block>
@@ -156,20 +162,64 @@
                     </actions>
                 </event-block>
                 <event-block sid="801849547324201">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is in touch" sid="613724069604203" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="752872832033246" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="169953970313763" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="820120528275727">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="421859451292231" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="171338824912707" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="354196206763802" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Moving&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="652596492809073">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="544350152422329" type="System">
+                            <param id="0" name="First value">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="262041679356938" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="220383785950046">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="820810972447753" type="player">
+                            <param id="0" name="Instance variable">Immortal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="447181172839114" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Invulnerable&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="438173811917479">
                     <conditions />

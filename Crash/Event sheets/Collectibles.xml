@@ -170,6 +170,11 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="226699906483200" type="camera">
+                            <param id="0" name="Magnitude">20</param>
+                            <param id="1" name="Duration">0.5</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="208591308012196" type="AoeCandy" />
                     </actions>
                     <sub-events>
