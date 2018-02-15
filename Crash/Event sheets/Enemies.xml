@@ -174,7 +174,7 @@
         <event-group description="" sid="188214979477712" title="Enemy Spawning">
             <sub-events>
                 <variable constant="0" name="enemySpawn" sid="497738478152789" static="0" type="number">0</variable>
-                <variable constant="0" name="spawnDistance" sid="525821887074233" static="0" type="number">50</variable>
+                <variable constant="0" name="enemySpawnDistance" sid="525821887074233" static="0" type="number">50</variable>
                 <comment></comment>
                 <event-block sid="250593321485403">
                     <conditions>
@@ -202,8 +202,8 @@
                                 <action id="-3" name="Create object" sid="567387560699691" type="System">
                                     <param id="0" name="Object to create">enemy2</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                    <param id="3" name="Y">-spawnDistance</param>
+                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                    <param id="3" name="Y">-enemySpawnDistance</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -219,8 +219,8 @@
                                         <action id="-3" name="Create object" sid="891675427811878" type="System">
                                             <param id="0" name="Object to create">enemyBasic</param>
                                             <param id="1" name="Layer">&quot;MG&quot;</param>
-                                            <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                            <param id="3" name="Y">-spawnDistance</param>
+                                            <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                            <param id="3" name="Y">-enemySpawnDistance</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -236,8 +236,8 @@
                                                 <action id="-3" name="Create object" sid="128977873132519" type="System">
                                                     <param id="0" name="Object to create">enemy3</param>
                                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                                    <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                                    <param id="3" name="Y">-spawnDistance</param>
+                                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                                    <param id="3" name="Y">-enemySpawnDistance</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -258,8 +258,8 @@
                                 <action id="-3" name="Create object" sid="573196294955821" type="System">
                                     <param id="0" name="Object to create">enemy2</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                    <param id="3" name="Y">LayoutHeight + spawnDistance</param>
+                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                    <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -275,8 +275,8 @@
                                         <action id="-3" name="Create object" sid="917270411280729" type="System">
                                             <param id="0" name="Object to create">enemyBasic</param>
                                             <param id="1" name="Layer">&quot;MG&quot;</param>
-                                            <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                            <param id="3" name="Y">LayoutHeight + spawnDistance</param>
+                                            <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                            <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -292,8 +292,8 @@
                                                 <action id="-3" name="Create object" sid="713558824266019" type="System">
                                                     <param id="0" name="Object to create">enemy3</param>
                                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                                    <param id="2" name="X">random(-spawnDistance, LayoutWidth+spawnDistance)</param>
-                                                    <param id="3" name="Y">LayoutHeight + spawnDistance</param>
+                                                    <param id="2" name="X">random(-enemySpawnDistance, LayoutWidth+enemySpawnDistance)</param>
+                                                    <param id="3" name="Y">LayoutHeight + enemySpawnDistance</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -314,8 +314,8 @@
                                 <action id="-3" name="Create object" sid="569708912267904" type="System">
                                     <param id="0" name="Object to create">enemy2</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">-spawnDistance</param>
-                                    <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                    <param id="2" name="X">-enemySpawnDistance</param>
+                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -331,8 +331,8 @@
                                         <action id="-3" name="Create object" sid="831463258143662" type="System">
                                             <param id="0" name="Object to create">enemyBasic</param>
                                             <param id="1" name="Layer">&quot;MG&quot;</param>
-                                            <param id="2" name="X">-spawnDistance</param>
-                                            <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                            <param id="2" name="X">-enemySpawnDistance</param>
+                                            <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -348,8 +348,8 @@
                                                 <action id="-3" name="Create object" sid="661489220864383" type="System">
                                                     <param id="0" name="Object to create">enemy3</param>
                                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                                    <param id="2" name="X">-spawnDistance</param>
-                                                    <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                                    <param id="2" name="X">-enemySpawnDistance</param>
+                                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -370,8 +370,8 @@
                                 <action id="-3" name="Create object" sid="186331944668781" type="System">
                                     <param id="0" name="Object to create">enemy2</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">LayoutWidth+spawnDistance</param>
-                                    <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                    <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -387,8 +387,8 @@
                                         <action id="-3" name="Create object" sid="618887985206607" type="System">
                                             <param id="0" name="Object to create">enemyBasic</param>
                                             <param id="1" name="Layer">&quot;MG&quot;</param>
-                                            <param id="2" name="X">LayoutWidth+spawnDistance</param>
-                                            <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                            <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                            <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -404,8 +404,8 @@
                                                 <action id="-3" name="Create object" sid="817096002996589" type="System">
                                                     <param id="0" name="Object to create">enemy3</param>
                                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                                    <param id="2" name="X">LayoutWidth+spawnDistance</param>
-                                                    <param id="3" name="Y">random(-spawnDistance, LayoutHeight+spawnDistance)</param>
+                                                    <param id="2" name="X">LayoutWidth+enemySpawnDistance</param>
+                                                    <param id="3" name="Y">random(-enemySpawnDistance, LayoutHeight+enemySpawnDistance)</param>
                                                 </action>
                                             </actions>
                                         </event-block>

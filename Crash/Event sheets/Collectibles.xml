@@ -6,6 +6,7 @@
         <variable constant="0" name="SpawnChance" sid="876138984674661" static="0" type="number">0</variable>
         <event-group description="" sid="390561440763992" title="Collectibles">
             <sub-events>
+                <variable constant="0" name="collectibleSpawnDistance" sid="517144515783366" static="0" type="number">50</variable>
                 <event-block sid="668151957664748">
                     <conditions />
                     <actions />
@@ -41,8 +42,8 @@
                                 <action id="-3" name="Create object" sid="489879323942515" type="System">
                                     <param id="0" name="Object to create">Candy</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(0, LayoutWidth)</param>
-                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                    <param id="2" name="X">random(collectibleSpawnDistance, LayoutWidth-collectibleSpawnDistance)</param>
+                                    <param id="3" name="Y">random(collectibleSpawnDistance, LayoutHeight-collectibleSpawnDistance)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -64,8 +65,8 @@
                                 <action id="-3" name="Create object" sid="115732744997961" type="System">
                                     <param id="0" name="Object to create">TimeCandy</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(0, LayoutWidth)</param>
-                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
+                                    <param id="2" name="X">random(collectibleSpawnDistance, LayoutWidth-collectibleSpawnDistance)</param>
+                                    <param id="3" name="Y">random(collectibleSpawnDistance, LayoutHeight-collectibleSpawnDistance)</param>
                                 </action>
                             </actions>
                         </event-block>

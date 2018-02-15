@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -367,6 +368,55 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="4" loop="0" name="Testing" pingpong="0" repeatcount="1" repeatto="0" sid="662428245647963" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 3.png">
+                            <collision-poly>
+                                <point x="0.328125" y="0.3125" />
+                                <point x="0.5" y="0.28125" />
+                                <point x="0.65625" y="0.328125" />
+                                <point x="0.722656" y="0.5" />
+                                <point x="0.769531" y="0.785156" />
+                                <point x="0.5" y="0.8125" />
+                                <point x="0.222656" y="0.792969" />
+                                <point x="0.128906" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503906" original-source="C:\Users\brian\Downloads\Layer 2.png">
+                            <collision-poly>
+                                <point x="0.206055" y="0.219819" />
+                                <point x="0.5" y="0.104996" />
+                                <point x="0.790527" y="0.223099" />
+                                <point x="0.906739" y="0.501953" />
+                                <point x="0.787109" y="0.777527" />
+                                <point x="0.5" y="0.892349" />
+                                <point x="0.209473" y="0.780807" />
+                                <point x="0.0864258" y="0.501953" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503906" original-source="C:\Users\brian\Downloads\Layer 4.png">
+                            <collision-poly>
+                                <point x="0.34375" y="0.234375" />
+                                <point x="0.5" y="0.0976563" />
+                                <point x="0.648438" y="0.242188" />
+                                <point x="0.695313" y="0.5" />
+                                <point x="0.707031" y="0.816406" />
+                                <point x="0.5" y="0.902344" />
+                                <point x="0.296875" y="0.8125" />
+                                <point x="0.234375" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503906" original-source="C:\Users\brian\Downloads\Layer 1.png">
+                            <collision-poly>
+                                <point x="0.367188" y="0.277344" />
+                                <point x="0.5" y="0.128906" />
+                                <point x="0.707031" y="0.203125" />
+                                <point x="0.890625" y="0.5" />
+                                <point x="0.761719" y="0.851563" />
+                                <point x="0.09375" y="0.996094" />
+                                <point x="0.273438" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
         </object-folder>
@@ -570,6 +620,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Keyboard" sid="357741363397634">
+            <plugin id="Keyboard" />
+        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
@@ -629,6 +682,7 @@
         </global-instance>
         <global-instance type="Browser" uid="4" />
         <global-instance type="Mouse" uid="21" />
+        <global-instance type="Keyboard" uid="27" />
     </global-instances>
     <sounds-folder>
         <file name="Start_sound_1.m4a" />
