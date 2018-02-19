@@ -712,6 +712,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Immortal" sid="446829324375392" type="boolean" />
+                    <instance-variable name="ImmortalTimer" sid="865990418009926" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="358513802575233">
