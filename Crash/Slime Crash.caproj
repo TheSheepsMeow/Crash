@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -26,10 +25,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -152,7 +148,7 @@
                 <plugin id="Spritefont2" />
                 <texture />
             </object-type>
-            <object-type name="textHighScore" sid="569338947096204">
+            <object-type name="textScore" sid="569338947096204">
                 <plugin id="Spritefont2" />
                 <texture />
             </object-type>
@@ -228,10 +224,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\homepress1.png" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="textScore" sid="778092766100117">
-                <plugin id="Spritefont2" />
-                <texture />
             </object-type>
         </object-folder>
         <object-folder name="system">
@@ -415,8 +407,30 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382202342100117" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Candy.png">
+                            <collision-poly>
+                                <point x="0.26" y="0.26" />
+                                <point x="0.5" y="0.172" />
+                                <point x="0.732" y="0.268" />
+                                <point x="1" y="0.5" />
+                                <point x="0.732" y="0.732" />
+                                <point x="0.5" y="0.832" />
+                                <point x="0.26" y="0.74" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Candy.png">
+                            <collision-poly>
+                                <point x="0.26" y="0.26" />
+                                <point x="0.5" y="0.172" />
+                                <point x="0.732" y="0.268" />
+                                <point x="1" y="0.5" />
+                                <point x="0.732" y="0.732" />
+                                <point x="0.5" y="0.832" />
+                                <point x="0.26" y="0.74" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -439,8 +453,30 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Time.png">
+                            <collision-poly>
+                                <point x="0.332" y="0.332" />
+                                <point x="0.5" y="0" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.812" y="0.5" />
+                                <point x="0.812" y="0.812" />
+                                <point x="0.5" y="1" />
+                                <point x="0.18" y="0.82" />
+                                <point x="0.18" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Time.png">
+                            <collision-poly>
+                                <point x="0.332" y="0.332" />
+                                <point x="0.5" y="0" />
+                                <point x="0.668" y="0.332" />
+                                <point x="0.812" y="0.5" />
+                                <point x="0.812" y="0.812" />
+                                <point x="0.5" y="1" />
+                                <point x="0.18" y="0.82" />
+                                <point x="0.18" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -448,8 +484,30 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404225209679727" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.508" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Bomb.png">
+                            <collision-poly>
+                                <point x="0.311688" y="0.24" />
+                                <point x="0.493506" y="0" />
+                                <point x="0.688312" y="0.24" />
+                                <point x="0.935065" y="0.5" />
+                                <point x="0.831169" y="0.87" />
+                                <point x="0.493506" y="1" />
+                                <point x="0.168831" y="0.87" />
+                                <point x="0.0649351" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Crash_Bomb.png">
+                            <collision-poly>
+                                <point x="0.311688" y="0.24" />
+                                <point x="0.493506" y="0" />
+                                <point x="0.688312" y="0.24" />
+                                <point x="0.935065" y="0.5" />
+                                <point x="0.831169" y="0.87" />
+                                <point x="0.493506" y="1" />
+                                <point x="0.168831" y="0.87" />
+                                <point x="0.0649351" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -460,9 +518,6 @@
                 <behaviors>
                     <behavior-type name="Pin" sid="497257135318840">
                         <behavior id="Pin" />
-                    </behavior-type>
-                    <behavior-type name="Flash" sid="926872639633100">
-                        <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -724,9 +779,6 @@
                 <instance-variables>
                     <instance-variable name="Immortal" sid="446829324375392" type="boolean" />
                     <instance-variable name="ImmortalTimer" sid="865990418009926" type="number" />
-                    <instance-variable name="SlowDown" sid="988532469015549" type="boolean" />
-                    <instance-variable name="SlowDownTimer" sid="575958845941599" type="number" />
-                    <instance-variable name="Health" sid="252515309384321" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="BoundToLayout" sid="358513802575233">
@@ -796,10 +848,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Particles" sid="167406297375548">
-            <plugin id="Particles" />
-            <texture original-source="C:\Users\Valencio\Desktop\Star.png" />
-        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
@@ -811,14 +859,6 @@
             <instance-variables>
                 <instance-variable name="hp" sid="156463112869726" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="Rotate" sid="840913596434484">
-                    <behavior id="Rotate" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="699988220926136">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
         </family>
         <family name="familyCollectibles" plugin-id="Sprite" sid="613070847714933">
             <members>
