@@ -177,7 +177,7 @@
                         <condition id="-1" name="Every tick" sid="798944256101247" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="462304976991147" type="textScore">
+                        <action id="0" name="Set text" sid="462304976991147" type="textHighScore">
                             <param id="0" name="Text">&quot;high score: &quot; &amp; highScore</param>
                         </action>
                     </actions>

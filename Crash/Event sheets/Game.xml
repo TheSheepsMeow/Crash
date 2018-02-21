@@ -8,6 +8,7 @@
         <include>Collectibles</include>
         <include>LocalStorage</include>
         <variable constant="0" name="score" sid="438315306292690" static="0" type="number">0</variable>
+        <variable constant="0" name="Paused" sid="632701132537759" static="0" type="number">0</variable>
         <variable constant="0" name="highScore" sid="288408401537732" static="0" type="number">1</variable>
         <event-group description="Activate / deactivate this group as needed." sid="303387383532753" title="Debug">
             <sub-events>
@@ -112,6 +113,10 @@
                         <action id="-13" name="Set time scale" sid="307110964721256" type="System">
                             <param id="0" name="Time scale">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="216664846749715" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-14" name="Set object time scale" sid="938406359745485" type="System">
                             <param id="0" name="Object">titleButton</param>
                             <param id="1" name="Time scale">1.0</param>
@@ -137,6 +142,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="625269706880936" type="menuButtonHome">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936840807538353" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set time scale" sid="945557910681667" type="System">
                             <param id="0" name="Time scale">1.0</param>
@@ -177,8 +186,11 @@
                 <event-block sid="797422079817432">
                     <conditions />
                     <actions>
-                        <action id="0" name="Set text" sid="874256685827727" type="textScore">
-                            <param id="0" name="Text">&quot;score: &quot; &amp; score &amp; newline &amp; &quot;high score: &quot; &amp; highScore</param>
+                        <action id="0" name="Set text" sid="704150481382602" type="textScore">
+                            <param id="0" name="Text">&quot;score: &quot; &amp; score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="874256685827727" type="textHighScore">
+                            <param id="0" name="Text">&quot;high score: &quot; &amp; highScore</param>
                         </action>
                     </actions>
                 </event-block>

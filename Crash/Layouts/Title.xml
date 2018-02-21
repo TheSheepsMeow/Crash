@@ -376,7 +376,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="textScore" uid="32">
+                <instance type="textHighScore" uid="32">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
