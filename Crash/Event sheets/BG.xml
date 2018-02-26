@@ -5,6 +5,8 @@
     <events>
         <event-group description="" sid="111163590027077" title="BG objects">
             <sub-events>
+                <variable constant="0" name="boundaryTop" sid="404479919684965" static="0" type="number">100</variable>
+                <variable constant="0" name="boundaryBottom" sid="185690099415216" static="0" type="number">400</variable>
                 <event-block sid="739544011725589">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="859440007620141" type="System" />
@@ -17,7 +19,7 @@
                             <param id="0" name="Object to create">bg_dirt</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">random(LayoutWidth)</param>
-                            <param id="3" name="Y">random(120, 360)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
                         </action>
                         <action id="9" name="Set scale" sid="405826434193810" type="bg_dirt">
                             <param id="0" name="Scale">random(0.5,1.5)</param>
@@ -26,7 +28,7 @@
                             <param id="0" name="Object to create">bg_grass</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">random(LayoutWidth)</param>
-                            <param id="3" name="Y">random(120, 360)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
                         </action>
                         <action id="9" name="Set scale" sid="361711167040093" type="bg_grass">
                             <param id="0" name="Scale">random(0.25,1)</param>
@@ -45,7 +47,7 @@
                             <param id="0" name="Object to create">bg_flower</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">random(LayoutWidth)</param>
-                            <param id="3" name="Y">random(120, 360)</param>
+                            <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
                         </action>
                         <action id="9" name="Set scale" sid="623365017010461" type="bg_flower">
                             <param id="0" name="Scale">random(0.5,1)</param>
