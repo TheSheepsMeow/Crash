@@ -822,6 +822,87 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\Valencio\Desktop\BG.png" />
             </object-type>
+            <object-type name="bg_dirt" sid="980190469003812">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262837690095068" speed="5">
+                        <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\SC_dirt.png">
+                            <collision-poly>
+                                <point x="0.129032" y="0.222222" />
+                                <point x="0.483871" y="0" />
+                                <point x="0.870968" y="0.222222" />
+                                <point x="1" y="0.5" />
+                                <point x="0.935484" y="0.888889" />
+                                <point x="0.483871" y="1" />
+                                <point x="0.0645161" y="0.888889" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bg_flower" sid="412668711600275">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383949205810999" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_flower.png">
+                            <collision-poly>
+                                <point x="0.129032" y="0.222222" />
+                                <point x="0.483871" y="0" />
+                                <point x="0.870968" y="0.222222" />
+                                <point x="1" y="0.5" />
+                                <point x="0.935484" y="0.888889" />
+                                <point x="0.483871" y="1" />
+                                <point x="0.0645161" y="0.888889" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bg_grass" sid="605792335445369">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114607222947448" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\sc_bgGrass.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_grass.png">
+                            <collision-poly>
+                                <point x="0.129032" y="0.222222" />
+                                <point x="0.483871" y="0" />
+                                <point x="0.870968" y="0.222222" />
+                                <point x="1" y="0.5" />
+                                <point x="0.935484" y="0.888889" />
+                                <point x="0.483871" y="1" />
+                                <point x="0.0645161" y="0.888889" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="bg_grassTile" sid="478972567893016">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\plaingrass.png" />
+            </object-type>
+            <object-type name="Bg_Plant" sid="146793231683825">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219309001768076" speed="5">
+                        <frame duration="1" hotspotX="0.502024" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 4.png">
+                            <collision-poly>
+                                <point x="0.0850202" y="0.1" />
+                                <point x="0.497976" y="0.0666667" />
+                                <point x="0.813765" y="0.219048" />
+                                <point x="0.995951" y="0.5" />
+                                <point x="0.809717" y="0.77619" />
+                                <point x="0.497976" y="0.92381" />
+                                <point x="0.202429" y="0.761905" />
+                                <point x="0.194332" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Canvas" sid="807400911943529">
             <plugin id="c2canvas" />
@@ -843,90 +924,9 @@
         <object-type name="Keyboard" sid="357741363397634">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Bg_Plant" sid="146793231683825">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219309001768076" speed="5">
-                    <frame duration="1" hotspotX="0.502024" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 4.png">
-                        <collision-poly>
-                            <point x="0.0850202" y="0.1" />
-                            <point x="0.497976" y="0.0666667" />
-                            <point x="0.813765" y="0.219048" />
-                            <point x="0.995951" y="0.5" />
-                            <point x="0.809717" y="0.77619" />
-                            <point x="0.497976" y="0.92381" />
-                            <point x="0.202429" y="0.761905" />
-                            <point x="0.194332" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Particles" sid="167406297375548">
             <plugin id="Particles" />
             <texture original-source="C:\Users\Valencio\Desktop\Star.png" />
-        </object-type>
-        <object-type name="bg_dirt" sid="980190469003812">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262837690095068" speed="5">
-                    <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\Untitled-1.png">
-                        <collision-poly>
-                            <point x="0.129032" y="0.222222" />
-                            <point x="0.483871" y="0" />
-                            <point x="0.870968" y="0.222222" />
-                            <point x="1" y="0.5" />
-                            <point x="0.935484" y="0.888889" />
-                            <point x="0.483871" y="1" />
-                            <point x="0.0645161" y="0.888889" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="bg_grass" sid="605792335445369">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114607222947448" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\sc_bgGrass.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_grass.png">
-                        <collision-poly>
-                            <point x="0.129032" y="0.222222" />
-                            <point x="0.483871" y="0" />
-                            <point x="0.870968" y="0.222222" />
-                            <point x="1" y="0.5" />
-                            <point x="0.935484" y="0.888889" />
-                            <point x="0.483871" y="1" />
-                            <point x="0.0645161" y="0.888889" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="bg_flower" sid="412668711600275">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383949205810999" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_flower.png">
-                        <collision-poly>
-                            <point x="0.129032" y="0.222222" />
-                            <point x="0.483871" y="0" />
-                            <point x="0.870968" y="0.222222" />
-                            <point x="1" y="0.5" />
-                            <point x="0.935484" y="0.888889" />
-                            <point x="0.483871" y="1" />
-                            <point x="0.0645161" y="0.888889" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="bg_grassTile" sid="478972567893016">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\GJ Lee\Desktop\plaingrass.png" />
         </object-type>
     </object-folder>
     <families>
