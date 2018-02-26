@@ -181,7 +181,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-64</x>
-                        <y>256</y>
+                        <y>224</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
