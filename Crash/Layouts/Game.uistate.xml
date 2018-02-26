@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>230.04</position-x>
-        <position-y>263.178</position-y>
-        <position-z>74.5104</position-z>
-        <lookat-x>230.04</lookat-x>
-        <lookat-y>263.178</lookat-y>
+        <position-x>160</position-x>
+        <position-y>245.49</position-y>
+        <position-z>84.0276</position-z>
+        <lookat-x>160</lookat-x>
+        <lookat-y>245.49</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -23,13 +23,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="FG" />
+    <active-layer name="BG" />
     <layers>
         <layer locked="0" name="BG" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="MG" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="FG" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="MG" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="FG" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="UI" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="End" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Debug" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Debug" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>
