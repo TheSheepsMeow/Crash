@@ -11,8 +11,29 @@
                     <actions />
                 </event-block>
                 <event-block sid="845621408979730">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="117467469166046" type="player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="979312685225850" type="Sprite">
+                            <param id="0" name="X">player.X</param>
+                            <param id="1" name="Y">player.y</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="598341340694349" type="Sprite">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="668254276977556">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="149375522002498">
                     <conditions>
@@ -68,6 +89,12 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
+                                        <action id="-9" name="Destroy" sid="130524075265597" type="Sprite" />
+                                        <action id="0" name="Spawn another object" sid="564220971800151" type="player">
+                                            <param id="0" name="Object">HitParticles</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
                                         <action behavior="Flash" id="0" name="Flash" sid="743019303138145" type="playerAnimations">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
@@ -96,6 +123,11 @@
                                             <param id="0" name="Magnitude">80</param>
                                             <param id="1" name="Duration">0.1</param>
                                             <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="987329222245509" type="player">
+                                            <param id="0" name="Object">HitParticles</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">0</param>
                                         </action>
                                         <action id="0" name="Play" sid="721447342284866" type="Audio">
                                             <param id="0" name="Audio file">Start_sound_4</param>
@@ -166,6 +198,11 @@
                                 <action id="0" name="Spawn another object" sid="989330890533126" type="familyEnemies">
                                     <param id="0" name="Object">Candy</param>
                                     <param id="1" name="Layer">&quot;MG&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="855412879142562" type="familyEnemies">
+                                    <param id="0" name="Object">HitParticles</param>
+                                    <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
