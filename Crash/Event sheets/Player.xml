@@ -19,11 +19,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="979312685225850" type="Sprite">
+                        <action id="-3" name="Set position" sid="979312685225850" type="playerHelmet">
                             <param id="0" name="X">player.X</param>
                             <param id="1" name="Y">player.y</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="598341340694349" type="Sprite">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="598341340694349" type="playerHelmet">
                             <param id="0" name="Pin to">player</param>
                             <param id="1" name="Mode">1</param>
                         </action>
@@ -89,7 +89,7 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="130524075265597" type="Sprite" />
+                                        <action id="-9" name="Destroy" sid="130524075265597" type="playerHelmet" />
                                         <action id="0" name="Spawn another object" sid="564220971800151" type="player">
                                             <param id="0" name="Object">HitParticles</param>
                                             <param id="1" name="Layer">2</param>
@@ -205,7 +205,11 @@
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
+                                <action disabled="1" id="-9" name="Destroy" sid="903203969182452" type="familyEnemies" />
+                                <action id="-10" name="Set value" sid="206915095674038" type="familyEnemies">
+                                    <param id="0" name="Instance variable">hp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

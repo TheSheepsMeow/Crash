@@ -2,7 +2,7 @@
 <c2project>
     <name>Slime Crash</name>
     <description></description>
-    <version>0.06</version>
+    <version>0.07</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
@@ -26,14 +26,16 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -409,6 +411,145 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="enemyBasicDeath" sid="990158877523071">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="808764060849654" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Placeholder" pingpong="0" repeatcount="1" repeatto="0" sid="592777811419553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.226563" y="0.226563" />
+                                <point x="0.5" y="0.113281" />
+                                <point x="0.773438" y="0.226563" />
+                                <point x="0.894531" y="0.5" />
+                                <point x="0.78125" y="0.78125" />
+                                <point x="0.5" y="0.902344" />
+                                <point x="0.21875" y="0.78125" />
+                                <point x="0.105469" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.226563" y="0.226563" />
+                                <point x="0.5" y="0.113281" />
+                                <point x="0.773438" y="0.226563" />
+                                <point x="0.894531" y="0.5" />
+                                <point x="0.78125" y="0.78125" />
+                                <point x="0.5" y="0.902344" />
+                                <point x="0.21875" y="0.78125" />
+                                <point x="0.105469" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224776129629210" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 2.png">
+                            <collision-poly>
+                                <point x="0.789489" y="0.52381" />
+                                <point x="0.646795" y="0.743155" />
+                                <point x="0.39916" y="0.773772" />
+                                <point x="0.210347" y="0.619344" />
+                                <point x="0.256729" y="0.438095" />
+                                <point x="0.512605" y="0.313281" />
+                                <point x="0.739823" y="0.336087" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemy2Death" sid="885214769523852">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="994519257189953" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700455291428031" speed="5">
+                        <frame duration="1" hotspotX="0.502058" hotspotY="0.502347" original-source="C:\Users\brian\Downloads\Layer 3.png">
+                            <collision-poly>
+                                <point x="0.205761" y="0.375587" />
+                                <point x="0.506173" y="0.197183" />
+                                <point x="0.786008" y="0.276995" />
+                                <point x="0.91358" y="0.502347" />
+                                <point x="0.835391" y="0.798122" />
+                                <point x="0.497942" y="0.877934" />
+                                <point x="0.213992" y="0.793428" />
+                                <point x="0.0740741" y="0.586854" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Placeholder" pingpong="0" repeatcount="1" repeatto="0" sid="857842918847659" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemy3Death" sid="898004059205530">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="Number that increases the speed the animals move at" name="speedMultiplier" sid="556578395575918" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638300965614762" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 1.png">
+                            <collision-poly>
+                                <point x="0.149094" y="0.321094" />
+                                <point x="0.699188" y="0.336813" />
+                                <point x="0.626906" y="0.926906" />
+                                <point x="0.244531" y="0.907469" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Placeholder" pingpong="0" repeatcount="1" repeatto="0" sid="540261721682951" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.121094" y="0.121094" />
+                                <point x="0.5" y="0.0507813" />
+                                <point x="0.867188" y="0.132813" />
+                                <point x="0.945313" y="0.5" />
+                                <point x="0.878906" y="0.878906" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.144531" y="0.855469" />
+                                <point x="0.0546875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.121094" y="0.121094" />
+                                <point x="0.5" y="0.0507813" />
+                                <point x="0.867188" y="0.132813" />
+                                <point x="0.945313" y="0.5" />
+                                <point x="0.878906" y="0.878906" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.144531" y="0.855469" />
+                                <point x="0.0546875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="collectibles">
             <object-type name="Candy" sid="890914584029197">
@@ -517,6 +658,11 @@
                         <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="AdjustHSL">
+                        <effect id="hsladjust" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="DefaultOld" pingpong="0" repeatcount="1" repeatto="0" sid="391517918437510" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
@@ -755,19 +901,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="Invulnerable" pingpong="0" repeatcount="1" repeatto="0" sid="819282933607855" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.164063" y="0.164063" />
-                                <point x="0.5" y="0.0273438" />
-                                <point x="0.832031" y="0.167969" />
-                                <point x="0.964844" y="0.5" />
-                                <point x="0.828125" y="0.828125" />
-                                <point x="0.5" y="0.964844" />
-                                <point x="0.167969" y="0.832031" />
-                                <point x="0.0273438" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="1" loop="1" name="Invulnerable" pingpong="0" repeatcount="1" repeatto="0" sid="819282933607855" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.164063" y="0.164063" />
@@ -809,6 +943,35 @@
                                 <point x="0.5" y="0.972656" />
                                 <point x="0.167969" y="0.832031" />
                                 <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="playerHelmet" sid="579590631155837">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="870609673208238">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="AdjustHSL">
+                        <effect id="hsladjust" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125716878247421" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Player_Helmet.png">
+                            <collision-poly>
+                                <point x="0.3" y="0.3" />
+                                <point x="0.5" y="0.228" />
+                                <point x="0.7" y="0.3" />
+                                <point x="0.876" y="0.5" />
+                                <point x="0.776" y="0.776" />
+                                <point x="0.5" y="0.676" />
+                                <point x="0.224" y="0.776" />
+                                <point x="0.128" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -940,30 +1103,6 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
-        <object-type name="Sprite" sid="579590631155837">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="870609673208238">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125716878247421" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Player_Helmet.png">
-                        <collision-poly>
-                            <point x="0.3" y="0.3" />
-                            <point x="0.5" y="0.228" />
-                            <point x="0.7" y="0.3" />
-                            <point x="0.876" y="0.5" />
-                            <point x="0.776" y="0.776" />
-                            <point x="0.5" y="0.676" />
-                            <point x="0.224" y="0.776" />
-                            <point x="0.128" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
@@ -975,14 +1114,6 @@
             <instance-variables>
                 <instance-variable name="hp" sid="156463112869726" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="Rotate" sid="840913596434484">
-                    <behavior id="Rotate" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="699988220926136">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
         </family>
         <family name="familyCollectibles" plugin-id="Sprite" sid="613070847714933">
             <members>
@@ -991,6 +1122,21 @@
                 <member>InvulCandy</member>
                 <member>TimeCandy</member>
             </members>
+        </family>
+        <family name="familyEnemyDeath" plugin-id="Sprite" sid="126830621790688">
+            <members>
+                <member>enemy2Death</member>
+                <member>enemy3Death</member>
+                <member>enemyBasicDeath</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Physics" sid="474370615445155">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="640347385557072">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

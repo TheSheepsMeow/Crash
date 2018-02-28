@@ -11,10 +11,30 @@
         <variable constant="0" name="scoreTier5" sid="161601489204453" static="0" type="number">50</variable>
         <event-group description="" sid="306964845839215" title="Enemy Spawn Rate">
             <sub-events>
+                <comment></comment>
                 <event-block sid="247639706049754">
                     <conditions />
                     <actions />
                 </event-block>
+                <event-block sid="917814061519100">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="246767403235963" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="979943405779559" type="familyEnemyDeath">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748526189127129">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="634895855614493">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
                 <event-block sid="412745059969973">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="488055570681357" type="System">
@@ -482,9 +502,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>death</comment>
                 <event-block sid="452059868998979">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="277149406235154" type="enemyBasic">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="752264185019346" type="enemyBasic">
+                            <param id="0" name="Object">enemyBasicDeath</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="978668624482966" type="enemyBasic" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="571271348321619" type="enemyBasicDeath">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="310287110451471" type="enemyBasicDeath">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="429819145157622" type="enemyBasicDeath">
+                            <param id="0" name="Torque">20</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="596767929863742">
                     <conditions />
@@ -540,6 +585,35 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>death</comment>
+                <event-block sid="298353027312085">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="539211918468213" type="enemy2">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="375601485745399" type="enemy2">
+                            <param id="0" name="Object">enemy2Death</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="427862912565201" type="enemy2" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="852125865514117" type="enemy2Death">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="846811760701768" type="enemy2Death">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="834909647147395" type="enemy2Death">
+                            <param id="0" name="Torque">20</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="406895921247560">
                     <conditions />
                     <actions />
@@ -588,9 +662,34 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="899824822898385">
-                    <conditions />
-                    <actions />
+                <comment>death</comment>
+                <event-block sid="394433452173600">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="974065159127286" type="enemy3">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="458072278277338" type="enemy3">
+                            <param id="0" name="Object">enemy3Death</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="260711783380840" type="enemy3" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="874611326749202" type="enemy3Death">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="564023187557352" type="enemy3Death">
+                            <param id="0" name="Impulse">1</param>
+                            <param id="1" name="Angle">angle(player.X, player.y, Self.X, Self.Y)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="6" name="Apply torque" sid="260687171121819" type="enemy3Death">
+                            <param id="0" name="Torque">100</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="597053094368986">
                     <conditions />
