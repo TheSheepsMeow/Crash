@@ -4,6 +4,18 @@
     <name>Collectibles</name>
     <events>
         <variable constant="0" name="SpawnChance" sid="876138984674661" static="0" type="number">0</variable>
+        <event-block sid="696976518239991">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="217165167783241" type="System" />
+            </conditions>
+            <actions>
+                <action id="-30" name="Set layer effect enabled" sid="899737282422289" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Vignette&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="390561440763992" title="Collectibles">
             <sub-events>
                 <event-block sid="556275462698521">
@@ -524,9 +536,41 @@
                             <param id="0" name="Instance variable">SlowDownTimer</param>
                             <param id="1" name="Value">TimeCandy.Duration</param>
                         </action>
+                        <action id="-30" name="Set layer effect enabled" sid="756095831745210" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Vignette&quot;</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="840939573065363" type="TimeCandy" />
                     </actions>
                     <sub-events>
+                        <event-block sid="741165298495336">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="548353628552223" type="System">
+                                    <param id="0" name="First value">timeCandyClock.Count</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="993771253523029" type="System">
+                                    <param id="0" name="Object to create">timeCandyClock</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">LayoutWidth/2</param>
+                                    <param id="3" name="Y">LayoutHeight/2</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="376779109503232" type="System">
+                                    <param id="0" name="Object to create">timeCandyHand</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">LayoutWidth/2</param>
+                                    <param id="3" name="Y">LayoutHeight/2</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="655958656338991" type="timeCandyHand">
+                                    <param id="0" name="Pin to">timeCandyClock</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="977804344274138">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="664726546744406" type="player">
@@ -554,6 +598,11 @@
                         <action id="-13" name="Set boolean" sid="141820566780227" type="player">
                             <param id="0" name="Instance variable">SlowDown</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="146331071017371" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Vignette&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -627,6 +676,7 @@
                         <action id="-15" name="Restore object time scale" sid="316075694851058" type="System">
                             <param id="0" name="Object">familyEnemies</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
                     </actions>
                 </event-block>
                 <event-block disabled="1" sid="759856289984006">
@@ -826,5 +876,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="210667469706059">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="475439951967104" type="timeCandyHand" />
+                <condition id="-6" name="Every X seconds" sid="963265433650461" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="497702938716256" type="timeCandyHand">
+                    <param id="0" name="Angle">timeCandyHand.Angle + (360/7)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -35,6 +35,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -1102,6 +1103,65 @@
         <object-type name="AOEParticles" sid="802777820570533">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="timeCandyClock" sid="503176740097747">
+            <plugin id="Sprite" />
+            <container>
+                <type>timeCandyClock</type>
+                <type>timeCandyHand</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="376854649916298" speed="5">
+                    <frame duration="1" hotspotX="0.498753" hotspotY="0.497512" original-source="C:\Users\Valencio\Desktop\Clock.png">
+                        <collision-poly>
+                            <point x="0.149626" y="0.149254" />
+                            <point x="0.498753" y="0.00497512" />
+                            <point x="0.84788" y="0.149254" />
+                            <point x="0.995012" y="0.497512" />
+                            <point x="0.850374" y="0.848259" />
+                            <point x="0.498753" y="0.995025" />
+                            <point x="0.147132" y="0.848259" />
+                            <point x="0.00249377" y="0.497512" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="timeCandyHand" sid="696957943383448">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="512347395603697">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>timeCandyClock</type>
+                <type>timeCandyHand</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389361777652954" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.94359" original-source="C:\Users\Valencio\Desktop\Hand.png">
+                        <collision-poly>
+                            <point x="0.326087" y="0.928205" />
+                            <point x="0.478261" y="0.0051282" />
+                            <point x="0.652174" y="0.923077" />
+                            <point x="0.586957" y="0.964103" />
+                            <point x="0.543478" y="0.979487" />
+                            <point x="0.478261" y="0.989744" />
+                            <point x="0.434783" y="0.974359" />
+                            <point x="0.413043" y="0.964103" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="timeCandyBG" sid="572184488509358">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877305546879004" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
