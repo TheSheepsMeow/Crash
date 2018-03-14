@@ -124,6 +124,10 @@
                                             <param id="1" name="Duration">0.1</param>
                                             <param id="2" name="Mode">0</param>
                                         </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="481974790650429" type="GameOverBG" />
+                                        <action id="-15" name="Set visible" sid="565197105483731" type="menuButtonHome">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
                                         <action id="0" name="Spawn another object" sid="987329222245509" type="player">
                                             <param id="0" name="Object">HitParticles</param>
                                             <param id="1" name="Layer">2</param>
@@ -151,31 +155,28 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action id="-25" name="Go to layout (by name)" sid="614157154601724" type="System">
-                                            <param id="0" name="Layout">&quot;Title&quot;</param>
-                                        </action>
-                                        <action id="-13" name="Set time scale" sid="932262692733264" type="System">
+                                        <action disabled="1" id="-13" name="Set time scale" sid="932262692733264" type="System">
                                             <param id="0" name="Time scale">1</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="908301246088526" type="System">
+                                        <action disabled="1" id="-9" name="Set value" sid="908301246088526" type="System">
                                             <param id="0" name="Variable">playerIsAlive</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-34" name="Set layer background color" sid="597810617408643" type="System">
+                                        <action disabled="1" id="-34" name="Set layer background color" sid="597810617408643" type="System">
                                             <param id="0" name="Layer">0</param>
                                             <param id="1" name="Color">rgb(0, 0, 0)</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="103541717360190" type="System">
+                                        <action disabled="1" id="-16" name="Wait" sid="103541717360190" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
-                                        <action id="-34" name="Set layer background color" sid="985707615188406" type="System">
+                                        <action disabled="1" id="-34" name="Set layer background color" sid="985707615188406" type="System">
                                             <param id="0" name="Layer">0</param>
                                             <param id="1" name="Color">rgb(255, 255, 255)</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="688435343736866" type="System">
+                                        <action disabled="1" id="-16" name="Wait" sid="688435343736866" type="System">
                                             <param id="0" name="Seconds">0.1</param>
                                         </action>
-                                        <action id="-34" name="Set layer background color" sid="215471142168476" type="System">
+                                        <action disabled="1" id="-34" name="Set layer background color" sid="215471142168476" type="System">
                                             <param id="0" name="Layer">0</param>
                                             <param id="1" name="Color">rgb(0, 0, 0)</param>
                                         </action>
