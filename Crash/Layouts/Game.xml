@@ -167,6 +167,14 @@
                         </parameters>
                     </effect-instance>
                 </effect-type>
+                <effect-type name="Sepia">
+                    <effect id="sepia" />
+                    <effect-instance type="Sepia">
+                        <parameters>
+                            <intensity>1</intensity>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
             </effects>
         </layer>
         <layer name="MG" sid="704379314717742">
@@ -261,11 +269,11 @@
                         <x>420</x>
                         <y>204</y>
                         <z>0</z>
-                        <width>36.244747162</width>
-                        <height>31.770086288</height>
+                        <width>5.966213226</width>
+                        <height>5.966213226</height>
                         <depth>0</depth>
-                        <hotspotX>0.502057612</hotspotX>
-                        <hotspotY>0.50234741</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -417,11 +425,11 @@
                         <x>440</x>
                         <y>-83</y>
                         <z>0</z>
-                        <width>22.125</width>
-                        <height>18.25</height>
+                        <width>31.25</width>
+                        <height>31.25</height>
                         <depth>0</depth>
-                        <hotspotX>0.497175127</hotspotX>
-                        <hotspotY>0.431506842</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -589,8 +597,8 @@
                         <x>417.409484863</x>
                         <y>287.148651123</y>
                         <z>0</z>
-                        <width>21.390171051</width>
-                        <height>18.873680115</height>
+                        <width>22.468667984</width>
+                        <height>22.468666077</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -849,8 +857,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-191.111480713</x>
-                        <y>227.711746216</y>
+                        <x>-219.425720215</x>
+                        <y>263.476989746</y>
                         <z>0</z>
                         <width>284.137207031</width>
                         <height>284.84576416</height>
@@ -868,14 +876,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <ClockTurnRate>0</ClockTurnRate>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-190.423751831</x>
-                        <y>227.651748657</y>
+                        <x>-218.737991333</x>
+                        <y>263.416992188</y>
                         <z>0</z>
                         <width>30.648853302</width>
                         <height>129.924484253</height>
@@ -937,7 +948,16 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="Sepia">
+                    <effect id="sepia" />
+                    <effect-instance type="Sepia">
+                        <parameters>
+                            <intensity>1</intensity>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="FG" sid="912157911585240">
             <initially-visible>1</initially-visible>
@@ -1065,8 +1085,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="GameOverBG" uid="78">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-725.577209473</x>
+                        <y>-730.192504883</y>
+                        <z>0</z>
+                        <width>383.010131836</width>
+                        <height>540.876220703</height>
+                        <depth>0</depth>
+                        <hotspotX>-1.812000036</hotspotX>
+                        <hotspotY>-1.292000055</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="Sepia">
+                    <effect id="sepia" />
+                    <effect-instance type="Sepia">
+                        <parameters>
+                            <intensity>1</intensity>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="UI" sid="255368972218281">
             <initially-visible>1</initially-visible>
@@ -1349,6 +1411,36 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>-1.570796371</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="textTips" uid="79">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text></text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>10</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>31.999980927</x>
+                        <y>178.358551025</y>
+                        <z>0</z>
+                        <width>263.389221191</width>
+                        <height>117.315139771</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
