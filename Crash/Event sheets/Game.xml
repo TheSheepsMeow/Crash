@@ -42,6 +42,14 @@
                             <param id="0" name="Layer">&quot;End&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="850547634029256" type="System">
+                            <param id="0" name="Layer">&quot;GameOver&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="903193499753164" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="595935117916175" type="System" />
                     </actions>
                 </event-block>
                 <event-block sid="647478022687747">
@@ -49,29 +57,48 @@
                         <condition id="3" name="On touched object" sid="609870706003479" type="Touch">
                             <param id="0" name="Object">restartButton</param>
                         </condition>
-                        <condition id="-9" name="Layer is visible" sid="422188640236263" type="System">
-                            <param id="0" name="Layer">&quot;End&quot;</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-26" name="Restart layout" sid="350625645843416" type="System" />
-                        <action id="-21" name="Reset global variables" sid="595935117916175" type="System" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="293736219406950">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="422188640236263" type="System">
+                                    <param id="0" name="Layer">&quot;End&quot;</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="291082603079061" type="System">
+                                    <param id="0" name="Layer">&quot;GameOver&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="350625645843416" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="886364126329948">
                     <conditions>
                         <condition id="3" name="On touched object" sid="270892086548611" type="Touch">
                             <param id="0" name="Object">titleButton</param>
                         </condition>
-                        <condition id="-9" name="Layer is visible" sid="448495874681732" type="System">
-                            <param id="0" name="Layer">&quot;End&quot;</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="626727532152507" type="System">
-                            <param id="0" name="Layout">Title</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="751265862736677">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="299034148824078" type="System">
+                                    <param id="0" name="Layer">&quot;End&quot;</param>
+                                </condition>
+                                <condition id="-9" name="Layer is visible" sid="448495874681732" type="System">
+                                    <param id="0" name="Layer">&quot;GameOver&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="626727532152507" type="System">
+                                    <param id="0" name="Layout">Title</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="317872613625974">
                     <conditions />
@@ -108,6 +135,9 @@
                             <param id="0" name="Layer">&quot;End&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="324740791909070" type="endBG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="165400890721561" type="menuButtonHome">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -140,6 +170,9 @@
                         <action id="-4" name="Set layer visible" sid="868575732170895" type="System">
                             <param id="0" name="Layer">&quot;End&quot;</param>
                             <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="604317079632569" type="endBG">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="625269706880936" type="menuButtonHome">
                             <param id="0" name="Visibility">1</param>
@@ -193,6 +226,23 @@
                         <action id="0" name="Set text" sid="874256685827727" type="textHighScore">
                             <param id="0" name="Text">&quot;high score: &quot; &amp; highScore</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="931574544996277" title="Restart Game">
+            <sub-events>
+                <event-block sid="901922967107257">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="761876187101483" type="Touch">
+                            <param id="0" name="Object">restartButton</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="772529939501040" type="System">
+                            <param id="0" name="Layer">&quot;GameOver&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="547759909184676" type="System" />
                     </actions>
                 </event-block>
             </sub-events>
