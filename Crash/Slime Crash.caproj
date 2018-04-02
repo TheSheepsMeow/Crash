@@ -158,7 +158,7 @@
             </object-type>
             <object-type name="textHighScore" sid="569338947096204">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\Valencio\Desktop\SpriteFont_Monofett_Regular_(26)_[1,1,1,1]_20x25.png" />
             </object-type>
             <object-type name="backButton" sid="170907701600090">
                 <plugin id="Sprite" />
@@ -235,11 +235,11 @@
             </object-type>
             <object-type name="textScore" sid="778092766100117">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\Valencio\Desktop\SpriteFont_Monofett_Regular_(26)_[1,1,1,1]_20x25.png" />
             </object-type>
             <object-type name="textTips" sid="122324859757629">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\Valencio\Desktop\SpriteFont_Inconsolata_Regular_(36)_[1,1,1,1]_22x36.png" />
             </object-type>
             <object-type name="restartGameButton" sid="595752922876725">
                 <plugin id="Sprite" />
@@ -336,17 +336,85 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136067522990215" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Enemy_Flaming_Corrected.png">
+                    <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136067522990215" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.175" y="0.825" />
-                                <point x="0.05" y="0.5" />
-                                <point x="0.15" y="0.15" />
-                                <point x="0.5" y="0.025" />
-                                <point x="0.85" y="0.15" />
-                                <point x="0.95" y="0.5" />
-                                <point x="0.825" y="0.825" />
-                                <point x="0.5" y="0.95" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -660,6 +728,25 @@
                                 <point x="0.454746" y="1" />
                                 <point x="0" y="0.885977" />
                                 <point x="0" y="0.466248" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BonusCandy" sid="397451126215189">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515919717573964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.480874" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Basic_Purple.png">
+                            <collision-poly>
+                                <point x="0.253968" y="0.142077" />
+                                <point x="0.5" y="0.00546448" />
+                                <point x="0.746032" y="0.142077" />
+                                <point x="0.996032" y="0.480874" />
+                                <point x="0.75" y="0.825137" />
+                                <point x="0.5" y="0.994536" />
+                                <point x="0.25" y="0.825137" />
+                                <point x="0.00396825" y="0.480874" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1197,6 +1284,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Particles" sid="117710308105690">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
@@ -1247,6 +1338,7 @@
         <event-sheet>Collectibles.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>BG.xml</event-sheet>
+        <event-sheet>BonusLevel.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">

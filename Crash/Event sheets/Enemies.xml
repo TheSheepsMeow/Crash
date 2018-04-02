@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemies</name>
     <events>
+        <variable constant="0" name="isBonusLevel" sid="967815929207434" static="0" type="number">0</variable>
         <variable constant="0" name="spawnRate" sid="490405810054959" static="0" type="number">3</variable>
         <variable constant="0" name="scoreTier1" sid="616262165797486" static="0" type="number">10</variable>
         <variable constant="0" name="scoreTier2" sid="174744436137850" static="0" type="number">20</variable>
@@ -200,6 +201,11 @@
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="527782176006864" type="System">
                             <param id="0" name="Interval (seconds)">spawnRate + random(-1,1)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="112819303877014" type="System">
+                            <param id="0" name="Variable">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>

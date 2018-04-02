@@ -378,8 +378,8 @@
                 </instance>
                 <instance type="textHighScore" uid="32">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>20</character-width>
+                        <character-height>25</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>high score: 17</text>
                         <scale>0.66</scale>
@@ -394,11 +394,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>35.14402771</x>
-                        <y>75.400253296</y>
+                        <x>16</x>
+                        <y>64</y>
                         <z>0</z>
-                        <width>167.911132813</width>
-                        <height>13.570407867</height>
+                        <width>192</width>
+                        <height>27.093265533</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

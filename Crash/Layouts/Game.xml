@@ -269,8 +269,8 @@
                         <x>420</x>
                         <y>204</y>
                         <z>0</z>
-                        <width>37.288833618</width>
-                        <height>37.288833618</height>
+                        <width>29.831066132</width>
+                        <height>29.831066132</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -947,13 +947,74 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Particles" uid="80">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>60</spray-cone>
+                        <type>Continuous spray</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>32</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>157.661804199</x>
+                        <y>534.952270508</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BonusCandy" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>430.433044434</x>
+                        <y>245.75579834</y>
+                        <z>0</z>
+                        <width>20.589572906</width>
+                        <height>14.951951027</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.48087433</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects>
                 <effect-type name="Sepia">
                     <effect id="sepia" />
                     <effect-instance type="Sepia">
                         <parameters>
-                            <intensity>1</intensity>
+                            <intensity>0.5</intensity>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -985,8 +1046,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>489</x>
-                        <y>306</y>
+                        <x>488.059417725</x>
+                        <y>344.859558105</y>
                         <z>0</z>
                         <width>120</width>
                         <height>100</height>
@@ -1137,8 +1198,8 @@
                 </instance>
                 <instance type="textHighScore" uid="31">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>20</character-width>
+                        <character-height>25</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
                         <scale>1</scale>
@@ -1153,10 +1214,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
+                        <x>-8.211669922</x>
                         <y>448</y>
                         <z>0</z>
-                        <width>256</width>
+                        <width>336.539886475</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1196,8 +1257,8 @@
                 </instance>
                 <instance type="textScore" uid="57">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>20</character-width>
+                        <character-height>25</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
                         <scale>1</scale>
@@ -1380,62 +1441,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GameOverBG" uid="78">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>1</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-725.577209473</x>
-                        <y>-730.192504883</y>
-                        <z>0</z>
-                        <width>383.010131836</width>
-                        <height>540.876220703</height>
-                        <depth>0</depth>
-                        <hotspotX>-1.812000036</hotspotX>
-                        <hotspotY>-1.292000055</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
                 <instance type="textTips" uid="79">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text></text>
-                        <scale>1</scale>
+                        <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
-                        <line-height>10</line-height>
+                        <line-height>1</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>31.999975204</x>
-                        <y>51.04108429</y>
+                        <x>30</x>
+                        <y>50</y>
                         <z>0</z>
-                        <width>263.389221191</width>
-                        <height>117.315139771</height>
+                        <width>261</width>
+                        <height>167</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1611,28 +1639,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="restartButton" uid="80">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>156.990585327</x>
-                        <y>314.5809021</y>
-                        <z>0</z>
-                        <width>196</width>
-                        <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="titleButton" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1644,7 +1650,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>156.990585327</x>
-                        <y>218.5809021</y>
+                        <y>258.238464355</y>
                         <z>0</z>
                         <width>196</width>
                         <height>72</height>
@@ -1653,6 +1659,39 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GameOverBG" uid="78">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-605</x>
+                        <y>-656</y>
+                        <z>0</z>
+                        <width>331</width>
+                        <height>501</height>
+                        <depth>0</depth>
+                        <hotspotX>-1.812000036</hotspotX>
+                        <hotspotY>-1.292000055</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>

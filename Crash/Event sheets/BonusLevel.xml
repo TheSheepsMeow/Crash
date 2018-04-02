@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BonusLevel</name>
+    <events>
+        <variable constant="0" name="SpawnDistance" sid="209767235478497" static="0" type="number">50</variable>
+        <event-block sid="596501058850177">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="290914091473885" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="392886741588901" type="System">
+                    <param id="0" name="Variable">isBonusLevel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="480803506200139">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="980040188734396" type="System">
+                    <param id="0" name="Variable">isBonusLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="969746020034613" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-9" name="Set value" sid="936376691983869" type="System">
+                    <param id="0" name="Variable">isBonusLevel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="877071569771901">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="702564702985800" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="365374734698341" type="Function">
+                            <param id="0" name="Name">&quot;BonusLevel&quot;</param>
+                            <param id="1" name="Parameter {n}">SpawnDistance{###}LayoutWidth - SpawnDistance{###}LayoutHeight - SpawnDistance</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="770188536124156">
+            <conditions>
+                <condition id="0" name="On function" sid="347242892837140" type="Function">
+                    <param id="0" name="Name">&quot;BonusLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="268572062040769" type="System">
+                    <param id="0" name="Object to create">BonusCandy</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(Function.Param(0),Function.Param(1))</param>
+                    <param id="3" name="Y">random(Function.Param(0),Function.Param(2))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

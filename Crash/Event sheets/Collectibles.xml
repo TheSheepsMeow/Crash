@@ -92,6 +92,11 @@
                         <condition id="0" name="On function" sid="740134728315315" type="Function">
                             <param id="0" name="Name">&quot;Spawn Candy&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="347215968846219" type="System">
+                            <param id="0" name="Variable">isBonusLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="165123913076893" type="System">
@@ -623,10 +628,15 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="374970776294879">
+                <event-block any="1" sid="374970776294879">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="324956622503266" type="player">
                             <param id="0" name="Instance variable">SlowDownTimer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="974651867338012" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -656,6 +666,7 @@
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Sepia&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
                     </actions>
                 </event-block>
                 <event-block sid="440986196412826">
@@ -728,7 +739,6 @@
                         <action id="-15" name="Restore object time scale" sid="316075694851058" type="System">
                             <param id="0" name="Object">familyEnemies</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
                     </actions>
                 </event-block>
                 <event-block sid="212201410002054">
@@ -757,6 +767,35 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Candy that gives points during bonus phase" sid="349078748850422" title="BonusCandy">
+            <sub-events>
+                <event-block sid="873780738861774">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="169881933379643" type="player">
+                            <param id="0" name="Object">BonusCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="620426602551123" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="458371507494165" type="Audio">
+                            <param id="0" name="Audio file">Start_sound_1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="528532445727313" type="BonusCandy">
+                            <param id="0" name="Object">ScoreParticles</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="996072832639390" type="BonusCandy" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
