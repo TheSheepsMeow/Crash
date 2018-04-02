@@ -2,13 +2,13 @@
 <c2project>
     <name>Slime Crash</name>
     <description></description>
-    <version>0.07</version>
+    <version>0.08</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>1vk5z1y1jajy9</unique-id>
-    <saved-with-version>25200</saved-with-version>
+    <saved-with-version>25500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -1036,6 +1036,9 @@
                     <behavior-type name="BoundToLayout" sid="358513802575233">
                         <behavior id="bound" />
                     </behavior-type>
+                    <behavior-type name="Pin" sid="991713127510798">
+                        <behavior id="Pin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429248677603925" speed="5">
@@ -1078,6 +1081,25 @@
                                 <point x="0.5" y="0.676" />
                                 <point x="0.224" y="0.776" />
                                 <point x="0.128" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="relativeControlPoint" sid="203597587386746">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815423313221781" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png">
+                            <collision-poly>
+                                <point x="0.171875" y="0.171875" />
+                                <point x="0.5" y="0.0351563" />
+                                <point x="0.828125" y="0.171875" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.972656" />
+                                <point x="0.167969" y="0.832031" />
+                                <point x="0.03125" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
