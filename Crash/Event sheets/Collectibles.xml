@@ -242,7 +242,7 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="632652073396344" type="Candy">
                             <param id="0" name="Object">ScoreParticles</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="940923065980940" type="Candy" />
@@ -271,7 +271,7 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="628133657814655" type="AoeCandy">
                             <param id="0" name="Object">AOEParticles</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="226699906483200" type="camera">
@@ -329,7 +329,7 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="577039080935685" type="player">
                             <param id="0" name="Object">ScoreParticles</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-11" name="Add to" sid="649444220546092" type="player">
@@ -549,7 +549,7 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="131199661258172" type="player">
                             <param id="0" name="Object">ScoreParticles</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-11" name="Add to" sid="848394345806395" type="player">
@@ -593,13 +593,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="993771253523029" type="System">
                                     <param id="0" name="Object to create">timeCandyClock</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">LayoutWidth/2</param>
-                                    <param id="3" name="Y">LayoutHeight/2</param>
-                                </action>
-                                <action disabled="1" id="-3" name="Create object" sid="376779109503232" type="System">
-                                    <param id="0" name="Object to create">timeCandyHand</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;FX&quot;</param>
                                     <param id="2" name="X">LayoutWidth/2</param>
                                     <param id="3" name="Y">LayoutHeight/2</param>
                                 </action>
@@ -791,11 +785,15 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="528532445727313" type="BonusCandy">
                             <param id="0" name="Object">ScoreParticles</param>
-                            <param id="1" name="Layer">2</param>
+                            <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="996072832639390" type="BonusCandy" />
                     </actions>
+                </event-block>
+                <event-block sid="123952814487614">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

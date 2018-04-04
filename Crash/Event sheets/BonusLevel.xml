@@ -17,6 +17,9 @@
                     <param id="0" name="Variable">isBonusLevel</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="978673343832987" type="BonusBorder">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="480803506200139">
@@ -26,27 +29,29 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-6" name="Every X seconds" sid="702564702985800" type="System">
+                    <param id="0" name="Interval (seconds)">0.001</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="969746020034613" type="System">
-                    <param id="0" name="Seconds">10</param>
-                </action>
-                <action id="-9" name="Set value" sid="936376691983869" type="System">
-                    <param id="0" name="Variable">isBonusLevel</param>
-                    <param id="1" name="Value">0</param>
+                <action id="0" name="Call function" sid="365374734698341" type="Function">
+                    <param id="0" name="Name">&quot;BonusLevel&quot;</param>
+                    <param id="1" name="Parameter {n}">SpawnDistance{###}LayoutWidth - SpawnDistance{###}LayoutHeight - SpawnDistance</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="877071569771901">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="702564702985800" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
-                        <action id="0" name="Call function" sid="365374734698341" type="Function">
-                            <param id="0" name="Name">&quot;BonusLevel&quot;</param>
-                            <param id="1" name="Parameter {n}">SpawnDistance{###}LayoutWidth - SpawnDistance{###}LayoutHeight - SpawnDistance</param>
+                        <action id="-16" name="Wait" sid="969746020034613" type="System">
+                            <param id="0" name="Seconds">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936376691983869" type="System">
+                            <param id="0" name="Variable">isBonusLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="431296313049726" type="BonusBorder">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -61,9 +66,9 @@
             <actions>
                 <action id="-3" name="Create object" sid="268572062040769" type="System">
                     <param id="0" name="Object to create">BonusCandy</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">&quot;MG&quot;</param>
                     <param id="2" name="X">random(Function.Param(0),Function.Param(1))</param>
-                    <param id="3" name="Y">random(Function.Param(0),Function.Param(2))</param>
+                    <param id="3" name="Y">0</param>
                 </action>
             </actions>
         </event-block>

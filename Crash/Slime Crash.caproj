@@ -336,7 +336,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136067522990215" speed="5">
+                    <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136067522990215" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0" y="1" />
@@ -735,6 +735,11 @@
             </object-type>
             <object-type name="BonusCandy" sid="397451126215189">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="725520482901875">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515919717573964" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.480874" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Basic_Purple.png">
@@ -1261,6 +1266,14 @@
                                 <point x="0.413043" y="0.964103" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BonusBorder" sid="575968615477796">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601908975975199" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
