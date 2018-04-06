@@ -301,7 +301,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="637712723714294" type="textTips">
-                                    <param id="0" name="Text">&quot;Save the AOE candies for lots of enemies&quot;</param>
+                                    <param id="0" name="Text">&quot;Save the bomb candies for lots of enemies&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -307,11 +307,11 @@
                         <x>415</x>
                         <y>79</y>
                         <z>0</z>
-                        <width>85.414337158</width>
-                        <height>85.414337158</height>
+                        <width>47.83203125</width>
+                        <height>47.83203125</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.521428585</hotspotX>
+                        <hotspotY>0.392857134</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -410,6 +410,11 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -544,6 +549,11 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -648,8 +658,8 @@
                         <x>477</x>
                         <y>287</y>
                         <z>0</z>
-                        <width>21.38999939</width>
-                        <height>18.874000549</height>
+                        <width>22.468486786</width>
+                        <height>22.469047546</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -698,11 +708,11 @@
                         <x>491</x>
                         <y>200</y>
                         <z>0</z>
-                        <width>36.244998932</width>
-                        <height>31.770000458</height>
+                        <width>29.831274033</width>
+                        <height>29.830986023</height>
                         <depth>0</depth>
-                        <hotspotX>0.502057612</hotspotX>
-                        <hotspotY>0.50234741</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1161,7 +1171,7 @@
             <instances>
                 <instance type="timeCandyHand" uid="71">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1175,8 +1185,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-218.737991333</x>
-                        <y>263.416992188</y>
+                        <x>160</x>
+                        <y>224</y>
                         <z>0</z>
                         <width>30.648853302</width>
                         <height>129.924484253</height>
@@ -1184,7 +1194,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.943589747</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>0.300000012</opacity>
                     </world>
                 </instance>
                 <instance type="timeCandyClock" uid="70">
@@ -1197,8 +1207,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-219.425720215</x>
-                        <y>263.476989746</y>
+                        <x>160</x>
+                        <y>224</y>
                         <z>0</z>
                         <width>284.137207031</width>
                         <height>284.84576416</height>
@@ -1206,7 +1216,7 @@
                         <hotspotX>0.49875313</hotspotX>
                         <hotspotY>0.49751243</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>0.300000012</opacity>
                     </world>
                 </instance>
                 <instance type="ScoreParticles" uid="64">
@@ -1336,11 +1346,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160.27772522</x>
-                        <y>240.625473022</y>
+                        <x>160.294616699</x>
+                        <y>241.608261108</y>
                         <z>0</z>
-                        <width>384.908721924</width>
-                        <height>544.246154785</height>
+                        <width>394.936065674</width>
+                        <height>558.424438477</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1430,11 +1440,11 @@
                 </instance>
                 <instance type="textHighScore" uid="31">
                     <properties>
-                        <character-width>20</character-width>
-                        <character-height>25</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>1</scale>
+                        <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -1489,11 +1499,11 @@
                 </instance>
                 <instance type="textScore" uid="57">
                     <properties>
-                        <character-width>20</character-width>
-                        <character-height>25</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>1</scale>
+                        <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

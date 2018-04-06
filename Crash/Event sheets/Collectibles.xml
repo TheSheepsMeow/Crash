@@ -584,18 +584,20 @@
                     <sub-events>
                         <event-block sid="741165298495336">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="548353628552223" type="System">
-                                    <param id="0" name="First value">timeCandyClock.Count</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">2</param>
-                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="345444754125447" type="timeCandyClock" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="993771253523029" type="System">
+                                <action disabled="1" id="-3" name="Create object" sid="993771253523029" type="System">
                                     <param id="0" name="Object to create">timeCandyClock</param>
                                     <param id="1" name="Layer">&quot;FX&quot;</param>
                                     <param id="2" name="X">LayoutWidth/2</param>
                                     <param id="3" name="Y">LayoutHeight/2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="696427987658497" type="timeCandyClock">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="137809352842471" type="timeCandyHand">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="655958656338991" type="timeCandyHand">
                                     <param id="0" name="Pin to">timeCandyClock</param>
@@ -660,7 +662,13 @@
                             <param id="1" name="Mode">0</param>
                             <param id="2" name="Effect">&quot;Sepia&quot;</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
+                        <action id="-15" name="Set visible" sid="618862765045875" type="timeCandyClock">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="366956415485537" type="timeCandyHand">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="228441533483491" type="timeCandyClock" />
                     </actions>
                 </event-block>
                 <event-block sid="440986196412826">
@@ -792,8 +800,12 @@
                     </actions>
                 </event-block>
                 <event-block sid="123952814487614">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="486582435805945" type="BonusCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="406593656965255" type="BonusCandy" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
