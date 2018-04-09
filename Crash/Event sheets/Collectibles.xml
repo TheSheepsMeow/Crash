@@ -248,6 +248,33 @@
                         <action id="-9" name="Destroy" sid="940923065980940" type="Candy" />
                     </actions>
                 </event-block>
+                <event-block sid="875593883770878">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="561302528703163" type="Candy" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="412490039470105" type="Candy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="975725444428468">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="993102556926586" type="Candy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="167407814038825" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="169471910150439" type="Candy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="When picked up does AOE to enemies" sid="610405757655759" title="AoeCandy">
@@ -530,6 +557,31 @@
         </event-group>
         <event-group description="Slows down enemies" sid="794110627143077" title="TimeCandy">
             <sub-events>
+                <event-block sid="694130001543326">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="786700387075565">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="136252653058262" type="TimeCandy" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="430595975619370">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="386176253767971" type="System">
+                                    <param id="0" name="Interval (seconds)">random(1,2)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="234328920113672" type="TimeCandy">
+                                    <param id="0" name="Animation">&quot;Shine&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="360000207694128">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="523053158088525" type="player">
