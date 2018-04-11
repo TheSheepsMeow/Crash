@@ -561,26 +561,48 @@
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="786700387075565">
+                <event-block sid="402074677672043">
                     <conditions>
-                        <condition id="-18" name="On created" sid="136252653058262" type="TimeCandy" />
+                        <condition id="-18" name="On created" sid="463668913386867" type="TimeCandy" />
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="430595975619370">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="386176253767971" type="System">
-                                    <param id="0" name="Interval (seconds)">random(1,2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="234328920113672" type="TimeCandy">
-                                    <param id="0" name="Animation">&quot;Shine&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="4" name="Set animation" sid="964609647233289" type="TimeCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="309640686257352">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="650633803178833" type="TimeCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="346144664713653" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="317917368029795" type="TimeCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="871843727039745">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="263391241249966" type="TimeCandy">
+                            <param id="0" name="Animation">&quot;Shake&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="231185040808695" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="399449154689836" type="TimeCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="360000207694128">
                     <conditions>
@@ -861,5 +883,34 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Shake Animation</comment>
+        <event-block sid="206945065909521">
+            <conditions>
+                <condition id="2" name="Is playing" sid="538109130922120" type="familyCollectibles">
+                    <param id="0" name="Animation">&quot;Shake&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="949866599398640" type="familyCollectibles">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine2" id="0" name="Set active" sid="851777132583236" type="familyCollectibles">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="733103050632001" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="865093551032228" type="familyCollectibles">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine2" id="0" name="Set active" sid="410327952557978" type="familyCollectibles">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="2" name="Stop" sid="207850109861453" type="familyCollectibles" />
+                <action id="-8" name="Set angle" sid="496068660253147" type="familyCollectibles">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -797,6 +797,9 @@
                     <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="353599739444972" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="213235364578221" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="InvulCandy" sid="122265539685807">
@@ -807,6 +810,20 @@
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211983204259089" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Star-Candy.png">
+                            <collision-poly>
+                                <point x="0.276" y="0.276" />
+                                <point x="0.5" y="0.028" />
+                                <point x="0.724" y="0.276" />
+                                <point x="0.876" y="0.5" />
+                                <point x="0.852" y="0.852" />
+                                <point x="0.5" y="0.828" />
+                                <point x="0.148" y="0.852" />
+                                <point x="0.128" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="235011349068565" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.276" y="0.276" />
                                 <point x="0.5" y="0.028" />
@@ -845,6 +862,9 @@
                     <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
+                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="870095732182158" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="AoeCandy" sid="787805027562844">
@@ -852,6 +872,20 @@
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404225209679727" speed="5">
                         <frame duration="1" hotspotX="0.453552" hotspotY="0.466063" original-source="C:\Users\Valencio\Desktop\GithubRepos\Internship\Crash\Crash\Art\Bomb_Update.png">
+                            <collision-poly>
+                                <point x="0.0665592" y="0.200078" />
+                                <point x="0.454746" y="0" />
+                                <point x="0.842934" y="0.200078" />
+                                <point x="1" y="0.466248" />
+                                <point x="1" y="0.901333" />
+                                <point x="0.454746" y="1" />
+                                <point x="0" y="0.885977" />
+                                <point x="0" y="0.466248" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="602634564690371" speed="5">
+                        <frame duration="1" hotspotX="0.453552" hotspotY="0.466063">
                             <collision-poly>
                                 <point x="0.0665592" y="0.200078" />
                                 <point x="0.454746" y="0" />
@@ -1484,6 +1518,9 @@
             </members>
             <behaviors>
                 <behavior-type name="Sine" sid="130041348979124">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="781991388078689">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
