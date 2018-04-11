@@ -1458,11 +1458,11 @@
                         <x>0</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>95.04283905</width>
-                        <height>80.805656433</height>
+                        <width>93.503684998</width>
+                        <height>94.273269653</height>
                         <depth>0</depth>
-                        <hotspotX>0.502024293</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1480,11 +1480,11 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>95.04283905</width>
-                        <height>80.805656433</height>
+                        <width>93.503684998</width>
+                        <height>94.273269653</height>
                         <depth>0</depth>
-                        <hotspotX>0.502024293</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1502,11 +1502,11 @@
                         <x>320</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>95.04283905</width>
-                        <height>80.805656433</height>
+                        <width>93.503684998</width>
+                        <height>94.273269653</height>
                         <depth>0</depth>
-                        <hotspotX>0.502024293</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1524,11 +1524,11 @@
                         <x>320</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>95.04283905</width>
-                        <height>80.805656433</height>
+                        <width>93.503684998</width>
+                        <height>94.273269653</height>
                         <depth>0</depth>
-                        <hotspotX>0.502024293</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1808,6 +1808,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="TipsBG" uid="102">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>144</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="menuButtonHome" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>

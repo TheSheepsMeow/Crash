@@ -1356,7 +1356,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219309001768076" speed="5">
-                        <frame duration="1" hotspotX="0.502024" hotspotY="0.5" original-source="C:\Users\brian\Downloads\Layer 4.png">
+                        <frame duration="1" hotspotX="0.502058" hotspotY="0.502041" original-source="C:\Users\Valencio\Desktop\bushes.png">
                             <collision-poly>
                                 <point x="0.0850202" y="0.1" />
                                 <point x="0.497976" y="0.0666667" />
@@ -1496,6 +1496,14 @@
         <object-type name="Particles" sid="117710308105690">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="TipsBG" sid="853886962651855">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590885175054142" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
