@@ -459,6 +459,11 @@
                                     <param id="0" name="Animation">&quot;Death&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-28" name="Set effect parameter" sid="786129509996907" type="playerAnimations">
+                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment></comment>
@@ -472,72 +477,6 @@
                                 <action id="4" name="Set animation" sid="364417572503785" type="playerAnimations">
                                     <param id="0" name="Animation">&quot;Invulnerable&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>test mode</comment>
-                <event-block sid="731035283212733">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="681517133482249" type="System">
-                            <param id="0" name="Variable">testMode</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="409657557513264" type="playerAnimations">
-                            <param id="0" name="Animation">&quot;Testing&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="989892048596333">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="439843818804158" type="Keyboard">
-                                    <param id="0" name="Key">49</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="203924607546107" type="playerAnimations">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="639193321400214">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="988770054622152" type="Keyboard">
-                                    <param id="0" name="Key">50</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="763332503334031" type="playerAnimations">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="176057066458297">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="395644191784053" type="Keyboard">
-                                    <param id="0" name="Key">51</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="765402998573142" type="playerAnimations">
-                                    <param id="0" name="Frame number">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="388036547952572">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="614142005594156" type="Keyboard">
-                                    <param id="0" name="Key">52</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="275679865367651" type="playerAnimations">
-                                    <param id="0" name="Frame number">3</param>
                                 </action>
                             </actions>
                         </event-block>

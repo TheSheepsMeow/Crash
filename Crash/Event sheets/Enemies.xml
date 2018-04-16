@@ -528,6 +528,11 @@
                             <param id="1" name="Layer">Self.LayerNumber</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-28" name="Set effect parameter" sid="792302771868605" type="enemyBasicDeath">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="978668624482966" type="enemyBasic" />
                         <action behavior="Physics" id="27" name="Set enabled" sid="571271348321619" type="enemyBasicDeath">
                             <param id="0" name="Mode">1</param>
@@ -615,6 +620,11 @@
                             <param id="0" name="Object">enemy2Death</param>
                             <param id="1" name="Layer">Self.LayerNumber</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="465314855490684" type="enemy2Death">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="427862912565201" type="enemy2" />
                         <action behavior="Physics" id="27" name="Set enabled" sid="852125865514117" type="enemy2Death">
@@ -740,6 +750,11 @@
                             <param id="1" name="Layer">Self.LayerNumber</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-28" name="Set effect parameter" sid="305057754940585" type="enemy3Death">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="260711783380840" type="enemy3" />
                         <action behavior="Physics" id="27" name="Set enabled" sid="874611326749202" type="enemy3Death">
                             <param id="0" name="Mode">1</param>
@@ -806,11 +821,11 @@
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="252217230174069">
+                <event-block sid="908463369852856">
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="908463369852856">
+                <event-block sid="957887049699320">
                     <conditions />
                     <actions />
                 </event-block>

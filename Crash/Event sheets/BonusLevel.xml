@@ -70,6 +70,9 @@
                     <param id="2" name="X">random(Function.Param(0),Function.Param(1))</param>
                     <param id="3" name="Y">0</param>
                 </action>
+                <action id="-8" name="Set angle" sid="960266118746621" type="BonusCandy">
+                    <param id="0" name="Angle">random(80,100)</param>
+                </action>
             </actions>
         </event-block>
     </events>
