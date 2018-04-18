@@ -333,6 +333,50 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment></comment>
+                <event-block sid="588770935351663">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="881866276743485" type="AoeCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="471017454463633" type="AoeCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="405131344483168">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="324488044669146" type="AoeCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="327591867825515" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="641751077031722" type="AoeCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680352705716937">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="757498499737206" type="AoeCandy">
+                            <param id="0" name="Animation">&quot;Shake&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="945647887456385" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="753293912109241" type="AoeCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="Makes player invulnerable for a set time" sid="951026337973007" title="InvulCandy">
@@ -450,6 +494,50 @@
                         <action id="-13" name="Set boolean" sid="817779530801937" type="player">
                             <param id="0" name="Instance variable">Immortal</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="841180618853611">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="797748744278875" type="InvulCandy" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="275346381779411" type="InvulCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="486743929022891">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="444818937331810" type="InvulCandy">
+                            <param id="0" name="Animation">&quot;Shine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="805797587996898" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="915909516908460" type="InvulCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536151913714255">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="174741238241247" type="InvulCandy">
+                            <param id="0" name="Animation">&quot;Shake&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="488059916643861" type="System">
+                            <param id="0" name="Seconds">random(2,5)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="447880513903416" type="InvulCandy">
+                            <param id="0" name="Animation">choose(&quot;Shine&quot;,&quot;Shake&quot;)</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -604,6 +692,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment></comment>
                 <event-block sid="360000207694128">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="523053158088525" type="player">
