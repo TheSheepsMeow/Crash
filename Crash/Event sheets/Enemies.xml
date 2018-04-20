@@ -485,11 +485,37 @@
                     <conditions>
                         <condition id="-1" name="Every tick" sid="600640881515808" type="System" />
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="605140923138764" type="enemyBasic">
-                            <param id="0" name="Angle">angle(enemyBasic.X, enemyBasic.Y, player.X,player.Y)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="258375873452746">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="661158701376827" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="605140923138764" type="enemyBasic">
+                                    <param id="0" name="Angle">angle(enemyBasic.X, enemyBasic.Y, player.X,player.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="526842840617513">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="863754893740094" type="System">
+                                    <param id="0" name="Variable">playerIsAlive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="475723283870412" type="enemyBasic">
+                                    <param id="0" name="Angle">Self.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment></comment>
                 <event-block sid="680375484584374">

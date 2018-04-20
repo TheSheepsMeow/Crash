@@ -340,7 +340,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <variable constant="0" name="testMode" sid="718232171461628" static="0" type="number">0</variable>
         <event-group description="" sid="854532106461874" title="Player Animations">
             <sub-events>
                 <event-block sid="388681732112429">
@@ -363,124 +362,82 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>toggle test mode</comment>
-                <event-block sid="917301015547714">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="805787867656021">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="806956738194899" type="Keyboard">
-                            <param id="0" name="Key">81</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="348953753867770" type="System">
-                            <param id="0" name="Variable">testMode</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="324502458978086">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="380105422038968" type="System">
-                            <param id="0" name="Variable">testMode</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="134469344986751" type="System">
-                            <param id="0" name="Variable">testMode</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="760663467841222">
                     <conditions />
                     <actions />
                 </event-block>
-                <comment>normal mode</comment>
-                <event-block sid="785206851325148">
+                <comment></comment>
+                <event-block sid="226647438663431">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="769136794736670" type="System">
-                            <param id="0" name="Variable">testMode</param>
+                        <condition id="2" inverted="1" name="Is in touch" sid="742853858573863" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="132271390668601" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="710578415729177" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="351221093056550">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="470398153718372" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="255693185125093" type="System">
+                            <param id="0" name="Variable">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="602307968464693" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Moving&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="567958069500600">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="401055510795363" type="System">
+                            <param id="0" name="First value">playerIsAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="586038661893369" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="490578072095210" type="playerAnimations">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="191017683064811">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="651174314984182" type="player">
+                            <param id="0" name="Instance variable">Immortal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="154994070287630" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Invulnerable&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="785206851325148">
+                    <conditions />
                     <actions />
-                    <sub-events>
-                        <comment></comment>
-                        <event-block sid="700642448797578">
-                            <conditions>
-                                <condition id="2" inverted="1" name="Is in touch" sid="272404994007031" type="Touch" />
-                                <condition id="-14" name="Compare variable" sid="404227397571203" type="System">
-                                    <param id="0" name="Variable">playerIsAlive</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="910295581215826" type="playerAnimations">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment></comment>
-                        <event-block sid="117839742721807">
-                            <conditions>
-                                <condition id="2" name="Is in touch" sid="427715301421064" type="Touch" />
-                                <condition id="-14" name="Compare variable" sid="805023308006637" type="System">
-                                    <param id="0" name="Variable">playerIsAlive</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="187517861991431" type="playerAnimations">
-                                    <param id="0" name="Animation">&quot;Moving&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment></comment>
-                        <event-block sid="908459509379603">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="225011970790324" type="System">
-                                    <param id="0" name="First value">playerIsAlive</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="802146792495907" type="playerAnimations">
-                                    <param id="0" name="Animation">&quot;Death&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="786129509996907" type="playerAnimations">
-                                    <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment></comment>
-                        <event-block sid="943950694888991">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="646413950720139" type="player">
-                                    <param id="0" name="Instance variable">Immortal</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="364417572503785" type="playerAnimations">
-                                    <param id="0" name="Animation">&quot;Invulnerable&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="335797639196083">
                     <conditions />
