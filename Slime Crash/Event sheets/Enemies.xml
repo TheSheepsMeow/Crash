@@ -857,5 +857,49 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="949417607612159" title="Rustle Bushes">
+            <sub-events>
+                <event-block sid="824081278566765">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="219772060588869">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="836486392773159" type="familyEnemies">
+                            <param id="0" name="Object">Bg_Plant</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="1" name="Set period" sid="255961913120048" type="Bg_Plant">
+                            <param id="0" name="Period">0.2</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="874933772455617" type="Bg_Plant">
+                            <param id="0" name="Magnitude">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="403441669915508" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="876758698229007" type="Bg_Plant">
+                            <param id="0" name="Period">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="955042424821066" type="Bg_Plant">
+                            <param id="0" name="Magnitude">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="914151775452414">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="752914074947679">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="204670956286116">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

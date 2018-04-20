@@ -2,7 +2,7 @@
 <c2project>
     <name>Slime Crash</name>
     <description></description>
-    <version>0.10</version>
+    <version>0.11</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
@@ -155,7 +155,7 @@
             </object-type>
             <object-type name="textTitle2" sid="229950994530590">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="D:\MEOW\Slime Crash\Slime Crash\Textures\textHighScore.png" />
             </object-type>
             <object-type name="textHighScore" sid="569338947096204">
                 <plugin id="Spritefont2" />
@@ -820,7 +820,7 @@
                     <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="353599739444972" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="213235364578221" speed="10">
+                    <animation framecount="1" loop="0" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="213235364578221" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -843,6 +843,9 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="188274492382602" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="414881726501034" speed="10">
@@ -874,7 +877,7 @@
                     <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="688132845013437" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="870095732182158" speed="10">
+                    <animation framecount="1" loop="0" name="Shake" pingpong="0" repeatcount="1" repeatto="0" sid="870095732182158" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1012,8 +1015,8 @@
             <object-type name="player" sid="288718553732221">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="Immortal" sid="446829324375392" type="boolean" />
-                    <instance-variable name="ImmortalTimer" sid="865990418009926" type="number" />
+                    <instance-variable name="Invul" sid="446829324375392" type="boolean" />
+                    <instance-variable name="InvulTimer" sid="865990418009926" type="number" />
                     <instance-variable name="SlowDown" sid="988532469015549" type="boolean" />
                     <instance-variable name="SlowDownTimer" sid="575958845941599" type="number" />
                     <instance-variable name="Health" sid="252515309384321" type="number" />
@@ -1164,18 +1167,23 @@
             </object-type>
             <object-type name="Bg_Plant" sid="146793231683825">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="363272667361658">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219309001768076" speed="5">
                         <frame duration="1" hotspotX="0.502058" hotspotY="0.502041" original-source="C:\Users\Valencio\Desktop\bushes.png">
                             <collision-poly>
-                                <point x="0.0850202" y="0.1" />
-                                <point x="0.497976" y="0.0666667" />
-                                <point x="0.813765" y="0.219048" />
-                                <point x="0.995951" y="0.5" />
-                                <point x="0.809717" y="0.77619" />
-                                <point x="0.497976" y="0.92381" />
-                                <point x="0.202429" y="0.761905" />
-                                <point x="0.194332" y="0.5" />
+                                <point x="0.17284" y="0.314286" />
+                                <point x="0.477366" y="0.0897959" />
+                                <point x="0.81893" y="0.289796" />
+                                <point x="0.831276" y="0.497959" />
+                                <point x="0.773663" y="0.710204" />
+                                <point x="0.469136" y="0.857143" />
+                                <point x="0.164609" y="0.640817" />
+                                <point x="0.0864197" y="0.465306" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1413,6 +1421,30 @@
         <file name="Start_sound_5.ogg" />
         <file name="Start_sound_6.m4a" />
         <file name="Start_sound_6.ogg" />
+        <file name="slimecrash_invul.m4a" />
+        <file name="slimecrash_invul.ogg" />
+        <file name="slimecrash_ahwordok.m4a" />
+        <file name="slimecrash_ahwordok.ogg" />
+        <file name="slimecrash_house1.m4a" />
+        <file name="slimecrash_house1.ogg" />
+        <file name="slimecrash_house2.m4a" />
+        <file name="slimecrash_house2.ogg" />
+        <file name="slimecrash_house3.m4a" />
+        <file name="slimecrash_house3.ogg" />
+        <file name="slimecrash_house4.m4a" />
+        <file name="slimecrash_house4.ogg" />
+        <file name="slimecrash_house5.m4a" />
+        <file name="slimecrash_house5.ogg" />
+        <file name="slimecrash_time.m4a" />
+        <file name="slimecrash_time.ogg" />
+        <file name="birds.m4a" />
+        <file name="birds.ogg" />
+        <file name="morningBird5.m4a" />
+        <file name="morningBird5.ogg" />
+        <file name="reverseBirds.m4a" />
+        <file name="reverseBirds.ogg" />
+        <file name="pooping.m4a" />
+        <file name="pooping.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

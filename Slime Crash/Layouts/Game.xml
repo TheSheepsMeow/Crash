@@ -100,7 +100,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-64</x>
+                        <x>-119</x>
                         <y>288</y>
                         <z>0</z>
                         <width>31</width>
@@ -122,7 +122,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-64</x>
+                        <x>-119</x>
                         <y>224</y>
                         <z>0</z>
                         <width>32</width>
@@ -144,7 +144,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-64</x>
+                        <x>-119</x>
                         <y>320</y>
                         <z>0</z>
                         <width>32</width>
@@ -193,59 +193,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="InvulCandy" uid="24">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Duration>5</Duration>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>437</x>
-                        <y>436</y>
-                        <z>0</z>
-                        <width>31.548820496</width>
-                        <height>31.548820496</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Candy" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -372,59 +319,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TimeCandy" uid="44">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Duration>7</Duration>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>509.34664917</x>
-                        <y>454.65335083</y>
-                        <z>0</z>
-                        <width>33.545097351</width>
-                        <height>33.545097351</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="AoeCandy" uid="45">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -483,8 +377,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Immortal>false</Immortal>
-                        <ImmortalTimer>0</ImmortalTimer>
+                        <Invul>false</Invul>
+                        <InvulTimer>0</InvulTimer>
                         <SlowDown>false</SlowDown>
                         <SlowDownTimer>0</SlowDownTimer>
                         <Health>2</Health>
@@ -501,7 +395,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>124</y>
+                        <y>192</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -560,7 +454,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Duration>5</Duration>
+                        <Duration>9</Duration>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -595,59 +489,6 @@
                     <world>
                         <x>64</x>
                         <y>608</y>
-                        <z>0</z>
-                        <width>31.548820496</width>
-                        <height>31.548820496</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="InvulCandy" uid="54">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Duration>5</Duration>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>530</x>
-                        <y>360</y>
                         <z>0</z>
                         <width>31.548820496</width>
                         <height>31.548820496</height>
@@ -711,59 +552,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TimeCandy" uid="56">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Duration>7</Duration>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>352</y>
-                        <z>0</z>
-                        <width>33.545097351</width>
-                        <height>33.545097351</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="playerHelmet" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -791,8 +579,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>159.884124756</x>
-                        <y>88.094024658</y>
+                        <x>-128</x>
+                        <y>192</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1126,7 +914,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Duration>5</Duration>
+                        <Duration>9</Duration>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -1214,59 +1002,6 @@
                         <z>0</z>
                         <width>29.760000229</width>
                         <height>29.760000229</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TimeCandy" uid="72">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Duration>7</Duration>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>1</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>160</x>
-                        <y>416</y>
-                        <z>0</z>
-                        <width>33.545097351</width>
-                        <height>33.545097351</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1460,8 +1195,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>488.059417725</x>
-                        <y>344.859558105</y>
+                        <x>629.03338623</x>
+                        <y>249.7840271</y>
                         <z>0</z>
                         <width>120</width>
                         <height>100</height>
@@ -1479,6 +1214,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1501,6 +1251,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1523,6 +1288,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1545,6 +1325,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1567,6 +1362,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1589,6 +1399,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1611,6 +1436,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1633,6 +1473,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1655,6 +1510,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1677,6 +1547,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1699,6 +1584,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1721,6 +1621,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1743,6 +1658,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1765,6 +1695,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1787,6 +1732,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1799,6 +1759,524 @@
                         <hotspotX>0.502057612</hotspotX>
                         <hotspotY>0.502040803</hotspotY>
                         <angle>2.181661606</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="24">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-23</x>
+                        <y>241</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="44">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-23</x>
+                        <y>141</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="54">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-23</x>
+                        <y>340</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="56">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>329.287475586</x>
+                        <y>241</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="72">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>329.287475586</x>
+                        <y>141</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>329.287475586</x>
+                        <y>340</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-12.82720089</x>
+                        <y>188.933334351</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="121">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-12.82720089</x>
+                        <y>287.933349609</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>338.049804688</x>
+                        <y>188.933334351</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>338.049804688</x>
+                        <y>287.933349609</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="124">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-12.827205658</x>
+                        <y>86.821258545</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>338.049804688</x>
+                        <y>82.839385986</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="126">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>338.049804688</x>
+                        <y>388.246063232</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-12.827204704</x>
+                        <y>379.592987061</y>
+                        <z>0</z>
+                        <width>63.738239288</width>
+                        <height>64.262840271</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.785398185</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -2408,28 +2886,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="titleButton" uid="81">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>158.732681274</x>
-                        <y>273.030334473</y>
-                        <z>0</z>
-                        <width>151.738357544</width>
-                        <height>55.740619659</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="GameOverBG" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2461,6 +2917,28 @@
                         <hotspotY>-1.292000055</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="titleButton" uid="81">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>151.738357544</width>
+                        <height>55.740619659</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

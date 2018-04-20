@@ -98,21 +98,33 @@
         <event-group description="" sid="643630441535684" title="Play Button">
             <sub-events>
                 <event-block sid="405256466566951">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="287883375380329" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="102947616817498" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="941754323102317">
                     <conditions>
                         <condition id="17" name="On tap object" sid="106314650565553" type="Touch">
                             <param id="0" name="Object">menuButton</param>
                         </condition>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="168796804809061" type="Audio">
+                            <param id="0" name="Tag">&quot;start&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="836337879424900" type="Audio">
-                            <param id="0" name="Audio file">Start_sound_3</param>
+                            <param id="0" name="Audio file">slimecrash_house2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;start&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="584007985254448" type="System">
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-9" name="Set value" sid="423754738878872" type="System">
                             <param id="0" name="Variable">score</param>
@@ -278,6 +290,51 @@
                             <param id="1" name="Target">2</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="117034414029231" title="Audio">
+            <sub-events>
+                <event-block sid="877120489028503">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="325302332195902">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="815434037079064" type="System" />
+                        <condition id="5" inverted="1" name="Is tag playing" sid="254469276032254" type="Audio">
+                            <param id="0" name="Tag">&quot;ahwordok&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="541025787274865" type="Audio">
+                            <param id="0" name="Audio file">slimecrash_ahwordok</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;ahwordok&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="933798481509478" type="Audio">
+                            <param id="0" name="Audio file">slimecrash_house1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="968120324531598" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(&quot;birds&quot;,&quot;morningBird5&quot;,&quot;reverseBirds&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;birds&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="491648183226252">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="507554938407245">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
