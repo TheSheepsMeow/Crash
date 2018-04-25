@@ -22,11 +22,20 @@
                             <param id="0" name="X">player.X</param>
                             <param id="1" name="Y">player.y</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="598341340694349" type="playerHelmet">
-                            <param id="0" name="Pin to">player</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="456997228764484">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="948194809525319" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="598341340694349" type="playerHelmet">
+                                    <param id="0" name="Pin to">player</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>relative player controls</comment>
                 <event-block sid="149375522002498">
@@ -141,7 +150,23 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="130524075265597" type="playerHelmet" />
+                                        <action id="0" name="Spawn another object" sid="754462662887739" type="playerHelmet">
+                                            <param id="0" name="Object">playerHelmetDeath</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="516710926172137" type="playerHelmetDeath">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="610962910321528" type="playerHelmetDeath">
+                                            <param id="0" name="Impulse">2</param>
+                                            <param id="1" name="Angle">random(0,360)</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="6" name="Apply torque" sid="804229787091670" type="playerHelmetDeath">
+                                            <param id="0" name="Torque">1000</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="831997405105368" type="playerHelmet" />
                                         <action id="0" name="Spawn another object" sid="564220971800151" type="player">
                                             <param id="0" name="Object">HitParticles</param>
                                             <param id="1" name="Layer">&quot;FX&quot;</param>
@@ -175,32 +200,40 @@
                                             <param id="0" name="Name">&quot;GameOver&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
-                                        <action disabled="1" id="-13" name="Set time scale" sid="932262692733264" type="System">
-                                            <param id="0" name="Time scale">1</param>
-                                        </action>
-                                        <action disabled="1" id="-9" name="Set value" sid="908301246088526" type="System">
-                                            <param id="0" name="Variable">playerIsAlive</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action disabled="1" id="-34" name="Set layer background color" sid="597810617408643" type="System">
-                                            <param id="0" name="Layer">0</param>
-                                            <param id="1" name="Color">rgb(0, 0, 0)</param>
-                                        </action>
-                                        <action disabled="1" id="-16" name="Wait" sid="103541717360190" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
-                                        </action>
-                                        <action disabled="1" id="-34" name="Set layer background color" sid="985707615188406" type="System">
-                                            <param id="0" name="Layer">0</param>
-                                            <param id="1" name="Color">rgb(255, 255, 255)</param>
-                                        </action>
-                                        <action disabled="1" id="-16" name="Wait" sid="688435343736866" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
-                                        </action>
-                                        <action disabled="1" id="-34" name="Set layer background color" sid="215471142168476" type="System">
-                                            <param id="0" name="Layer">0</param>
-                                            <param id="1" name="Color">rgb(0, 0, 0)</param>
-                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="535814986893152">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Is playing" sid="794170829732964" type="playerAnimations">
+                                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="749666400540952" type="playerAnimations">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="228633959924825" type="playerAnimations">
+                                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="678116671980921">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="318411265371758" type="playerAnimations">
+                                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="822906508910066" type="playerAnimations">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Stop" sid="691458933303631" type="playerAnimations" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -290,7 +323,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="783076060001779" type="System">
                             <param id="0" name="Variable">TipChoice</param>
-                            <param id="1" name="Value">choose(0,1,2)</param>
+                            <param id="1" name="Value">choose(0,1,2,3)</param>
                         </action>
                         <action id="-16" name="Set opacity" sid="352097749436824" type="textTips">
                             <param id="0" name="Opacity">100</param>
@@ -343,6 +376,20 @@
                             <actions>
                                 <action id="0" name="Set text" sid="776403566508608" type="textTips">
                                     <param id="0" name="Text">&quot;Time candies can help you escape&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="453337435797840">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="318746401682759" type="System">
+                                    <param id="0" name="Variable">TipChoice</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="521267216619760" type="textTips">
+                                    <param id="0" name="Text">&quot;Get 150 points to see the bonus level&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
