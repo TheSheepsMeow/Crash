@@ -113,6 +113,80 @@
                     </actions>
                 </event-block>
                 <comment>player death</comment>
+                <event-block disabled="1" sid="331659015162574">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="874157066542314" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="492607180251409" type="playerAnimations" />
+                    </actions>
+                </event-block>
+                <event-block sid="852658475351442">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="120127191793634" type="playerAnimations">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="3" name="Compare frame" sid="689038332434712" type="playerAnimations">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="905695043341744" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="104746973086630" type="playerAnimations" />
+                        <action id="-9" name="Destroy" sid="302503685488088" type="relativeControlPoint" />
+                    </actions>
+                </event-block>
+                <event-block sid="941028603897787">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="787382923532346" type="playerAnimations" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="767887034076532" type="System">
+                            <param id="0" name="Object to create">bg_flower</param>
+                            <param id="1" name="Layer">&quot;GameOver&quot;</param>
+                            <param id="2" name="X">playerAnimations.X</param>
+                            <param id="3" name="Y">playerAnimations.Y + 15</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="579260387134639" type="bg_flower">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="285562324125354" type="System">
+                            <param id="0" name="Group name">&quot;Flower&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" inactive="1" sid="351535493099736" title="Flower">
+                    <sub-events>
+                        <event-block sid="528136065187092">
+                            <conditions>
+                                <condition id="-17" name="Pick top/bottom" sid="103022219615807" type="bg_flower">
+                                    <param id="0" name="Which">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="142065824972894" type="bg_flower">
+                                    <param id="0" name="Width">lerp(bg_flower.Width,32,0.05)</param>
+                                    <param id="1" name="Height">lerp(bg_flower.Height,32,0.05)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment></comment>
+                <event-block sid="801172886817044">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="852924179868098" type="playerAnimations">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="609406811271530">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="444533060108970" type="player">
@@ -207,9 +281,9 @@
                                                 <condition id="2" inverted="1" name="Is playing" sid="794170829732964" type="playerAnimations">
                                                     <param id="0" name="Animation">&quot;Death&quot;</param>
                                                 </condition>
-                                                <condition id="3" name="Compare frame" sid="749666400540952" type="playerAnimations">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">4</param>
+                                                <condition disabled="1" id="-10" name="Compare opacity" sid="749666400540952" type="playerAnimations">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="Opacity">90</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -218,8 +292,14 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="333813077305264">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block sid="678116671980921">
+                                        <event-block disabled="1" sid="678116671980921">
                                             <conditions>
                                                 <condition id="2" name="Is playing" sid="318411265371758" type="playerAnimations">
                                                     <param id="0" name="Animation">&quot;Death&quot;</param>
@@ -271,6 +351,10 @@
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="753890100135907">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -469,6 +553,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
+                        <condition disabled="1" id="-10" name="Compare opacity" sid="294503512140414" type="playerAnimations">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Opacity">90</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="154839852373060" type="System" />
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="586038661893369" type="playerAnimations">
@@ -477,7 +566,7 @@
                         </action>
                         <action id="-28" name="Set effect parameter" sid="490578072095210" type="playerAnimations">
                             <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                            <param id="1" name="Parameter index">1</param>
+                            <param id="1" name="Parameter index">lerp(1,0,0.5)</param>
                             <param id="2" name="Value">0</param>
                         </action>
                     </actions>
