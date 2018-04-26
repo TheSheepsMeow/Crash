@@ -57,7 +57,7 @@
                         <action id="-21" name="Reset global variables" sid="595935117916175" type="System" />
                     </actions>
                 </event-block>
-                <event-block sid="647478022687747">
+                <event-block disabled="1" sid="647478022687747">
                     <conditions>
                         <condition id="3" name="On touched object" sid="609870706003479" type="Touch">
                             <param id="0" name="Object">restartButton</param>
@@ -65,7 +65,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="293736219406950">
+                        <event-block any="1" disabled="1" sid="293736219406950">
                             <conditions>
                                 <condition id="-9" name="Layer is visible" sid="422188640236263" type="System">
                                     <param id="0" name="Layer">&quot;End&quot;</param>
@@ -123,19 +123,34 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="139194928990405" title="Home Button">
+        <event-group description="" sid="139194928990405" title="Pause Button">
             <sub-events>
                 <event-block sid="983261663852035">
                     <conditions />
                     <actions />
                 </event-block>
+                <comment></comment>
+                <event-block disabled="1" sid="375991011391605">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="894968037577163" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="716172595434549" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>PAUSE</comment>
                 <event-block sid="125152586237081">
                     <conditions>
                         <condition id="3" name="On touched object" sid="184335448369715" type="Touch">
-                            <param id="0" name="Object">menuButtonHome</param>
+                            <param id="0" name="Object">menuButtonPause</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="467109666790843" type="menuButtonHome" />
+                        <condition id="-9" name="Is visible" sid="467109666790843" type="menuButtonPause" />
                     </conditions>
                     <actions>
                         <action disabled="1" id="-2" name="Go to layout" sid="905183702433019" type="System">
@@ -151,7 +166,7 @@
                         <action id="-15" name="Set visible" sid="324740791909070" type="endBG">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="165400890721561" type="menuButtonHome">
+                        <action id="-15" name="Set visible" sid="165400890721561" type="menuButtonPause">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-13" name="Set time scale" sid="307110964721256" type="System">
@@ -187,7 +202,7 @@
                         <action id="-15" name="Set visible" sid="604317079632569" type="endBG">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="625269706880936" type="menuButtonHome">
+                        <action id="-15" name="Set visible" sid="625269706880936" type="menuButtonPause">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="936840807538353" type="System">
@@ -203,11 +218,11 @@
                 <event-block sid="108689443326511">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="156839884706733" type="Touch">
-                            <param id="0" name="Object">menuButtonHome</param>
+                            <param id="0" name="Object">menuButtonPause</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="589440567776361" type="menuButtonHome">
+                        <action id="4" name="Set animation" sid="589440567776361" type="menuButtonPause">
                             <param id="0" name="Animation">&quot;Pressed&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -216,11 +231,11 @@
                 <event-block sid="570922774680863">
                     <conditions>
                         <condition id="4" inverted="1" name="Is touching object" sid="793919140717541" type="Touch">
-                            <param id="0" name="Object">menuButtonHome</param>
+                            <param id="0" name="Object">menuButtonPause</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="293704215814262" type="menuButtonHome">
+                        <action id="4" name="Set animation" sid="293704215814262" type="menuButtonPause">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -265,26 +280,6 @@
                         </action>
                         <action id="-2" name="Go to layout" sid="488572969962559" type="System">
                             <param id="0" name="Layout">Title</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="544149663323672" title="Game Audio">
-            <sub-events>
-                <event-block sid="327348107204693">
-                    <conditions>
-                        <condition id="0" name="On ended" sid="133502187623807" type="Audio">
-                            <param id="0" name="Tag">&quot;birds&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Play (by name)" sid="673164417951845" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">choose(&quot;birds&quot;,&quot;morningBird5&quot;,&quot;reverseBirds&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;birds&quot;</param>
                         </action>
                     </actions>
                 </event-block>

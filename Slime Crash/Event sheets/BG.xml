@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BG</name>
     <events>
+        <variable constant="0" name="boundaryTop" sid="404479919684965" static="0" type="number">100</variable>
+        <variable constant="0" name="boundaryBottom" sid="185690099415216" static="0" type="number">400</variable>
         <event-group description="" sid="111163590027077" title="BG objects">
             <sub-events>
-                <variable constant="0" name="boundaryTop" sid="404479919684965" static="0" type="number">100</variable>
-                <variable constant="0" name="boundaryBottom" sid="185690099415216" static="0" type="number">400</variable>
                 <event-block sid="739544011725589">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="859440007620141" type="System" />
@@ -84,6 +84,11 @@
                         <condition id="0" name="On collision with another object" sid="300267782784145" type="bg_dirt">
                             <param id="0" name="Object">bg_flower</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="388425736340943" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="441562382243899" type="bg_dirt" />
@@ -94,6 +99,11 @@
                         <condition id="0" name="On collision with another object" sid="217978423349026" type="bg_dirt">
                             <param id="0" name="Object">bg_flower</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="150299004034390" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="942279218411382" type="bg_flower" />
@@ -103,6 +113,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="502925750377167" type="bg_grass">
                             <param id="0" name="Object">bg_flower</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="873964933086786" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>

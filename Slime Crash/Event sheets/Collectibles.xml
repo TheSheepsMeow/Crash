@@ -101,23 +101,52 @@
                     <actions>
                         <action id="-9" name="Set value" sid="165123913076893" type="System">
                             <param id="0" name="Variable">SpawnChance</param>
-                            <param id="1" name="Value">random(1, 101)</param>
+                            <param id="1" name="Value">random(0, 100)</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>40% chance of spawning NOTHING</comment>
-                        <comment>40% chance of getting a regular candy</comment>
+                        <comment>These are the percentage chances of each candy type dropping. Make sure they add up to 100</comment>
+                        <variable constant="0" name="nothingChance" sid="351946147520585" static="0" type="number">10</variable>
+                        <variable constant="0" name="candyChance" sid="264417811676505" static="0" type="number">75</variable>
+                        <variable constant="0" name="timeChance" sid="860436617512106" static="0" type="number">10</variable>
+                        <variable constant="0" name="aoeChance" sid="985771111179086" static="0" type="number">10</variable>
+                        <variable constant="0" name="invulChance" sid="409972278205463" static="0" type="number">10</variable>
+                        <event-block sid="467759812299243">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="992005640967869" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="733053891724254" type="System">
+                                    <param id="0" name="Variable">SpawnChance</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">nothingChance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="542085215885414" type="System">
+                                    <param id="0" name="Object to create">bg_grass</param>
+                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                    <param id="2" name="X">random(LayoutWidth)</param>
+                                    <param id="3" name="Y">random(boundaryTop,boundaryBottom)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="283016306578628" type="bg_grass">
+                                    <param id="0" name="Scale">random(0.25,0.75)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="183650347343969">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="950318841157930" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">53</param>
+                                    <param id="2" name="Value">nothingChance</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="833071158328879" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">93</param>
+                                    <param id="2" name="Value">nothingChance+candyChance</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -129,59 +158,106 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>2% chance of getting a Time Candy</comment>
                         <event-block sid="214575669343445">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="415189771666977" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">93</param>
+                                    <param id="2" name="Value">nothingChance+candyChance</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="117297591609470" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">95</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="115732744997961" type="System">
-                                    <param id="0" name="Object to create">TimeCandy</param>
-                                    <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
-                                    <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="465013530794705">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="682968850916100" type="System">
+                                            <param id="0" name="First value">TimeCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="553180409541845" type="System">
+                                            <param id="0" name="Object to create">TimeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="782309761306285">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="791042984220819" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="159749641885404" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <comment>3% chance of getting an aoe candy</comment>
                         <event-block sid="202045020080364">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="590821991339531" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">95</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="168096436073640" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">98</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance+aoeChance</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="851801528052550" type="System">
-                                    <param id="0" name="Object to create">AoeCandy</param>
-                                    <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
-                                    <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="189963930238531">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="209663338199235" type="System">
+                                            <param id="0" name="First value">AoeCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="942431250867291" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="804436426307203">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="214544839061335" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="622284616827292" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <comment>2% chance of getting a InvulCandy</comment>
                         <event-block sid="697358806036475">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="348176949432633" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">98</param>
+                                    <param id="2" name="Value">nothingChance+candyChance+timeChance+aoeChance</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="178946369440662" type="System">
                                     <param id="0" name="Variable">SpawnChance</param>
@@ -189,30 +265,41 @@
                                     <param id="2" name="Value">100</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="468373886994806" type="System">
-                                    <param id="0" name="Object to create">InvulCandy</param>
-                                    <param id="1" name="Layer">&quot;MG&quot;</param>
-                                    <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
-                                    <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="905564480317647">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="585127105745414" type="System">
+                                            <param id="0" name="First value">InvulCandy.Count</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="468373886994806" type="System">
+                                            <param id="0" name="Object to create">InvulCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="629909313412969">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="561355370648156" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="617023808962123" type="System">
+                                            <param id="0" name="Object to create">AoeCandy</param>
+                                            <param id="1" name="Layer">&quot;MG&quot;</param>
+                                            <param id="2" name="X">random(Function.Param(0), Function.Param(1))</param>
+                                            <param id="3" name="Y">random(Function.Param(0), Function.Param(2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="189175171892112">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="965727626902503" type="System">
-                            <param id="0" name="Variable">Paused</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="424584238615460" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -229,16 +316,12 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Play" sid="986376723313605" type="Audio">
-                            <param id="0" name="Audio file">pooping</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="574496708255056" type="player">
-                            <param id="0" name="Object">ScoreParticles</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
+                        <action id="7" name="Play (by name)" sid="952089917092314" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="632652073396344" type="Candy">
                             <param id="0" name="Object">ScoreParticles</param>
@@ -264,16 +347,23 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Play" sid="989447273029947" type="Audio">
-                            <param id="0" name="Audio file">pooping</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="0" name="Spawn another object" sid="628133657814655" type="AoeCandy">
                             <param id="0" name="Object">AOEParticles</param>
                             <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="977257375768718" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="879674942577625" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="226699906483200" type="camera">
                             <param id="0" name="Magnitude">20</param>
@@ -326,6 +416,19 @@
                         <action id="6" name="Stop" sid="415301994384405" type="Audio">
                             <param id="0" name="Tag">&quot;invul&quot;</param>
                         </action>
+                        <action id="7" name="Play (by name)" sid="314873417068226" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="855566146918934" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
+                        </action>
                         <action id="0" name="Play" sid="687904728218378" type="Audio">
                             <param id="0" name="Audio file">slimecrash_invul</param>
                             <param id="2" name="Loop">0</param>
@@ -337,7 +440,11 @@
                             <param id="1" name="Layer">&quot;FX&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-11" name="Add to" sid="649444220546092" type="player">
+                        <action disabled="1" id="-11" name="Add to" sid="649444220546092" type="player">
+                            <param id="0" name="Instance variable">InvulTimer</param>
+                            <param id="1" name="Value">InvulCandy.Duration</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="971211095444801" type="player">
                             <param id="0" name="Instance variable">InvulTimer</param>
                             <param id="1" name="Value">InvulCandy.Duration</param>
                         </action>
@@ -395,6 +502,11 @@
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">random(0,100)</param>
                         </action>
+                        <action id="-28" name="Set effect parameter" sid="183662816209325" type="Bg_Plant">
+                            <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">random(0,100)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="395818346400428">
@@ -420,7 +532,7 @@
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="219990014802799" type="player">
                             <param id="0" name="Instance variable">InvulTimer</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
@@ -449,6 +561,19 @@
                         </action>
                         <action id="6" name="Stop" sid="864515380483065" type="Audio">
                             <param id="0" name="Tag">&quot;time&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="290400469141321" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="189191189224106" type="Audio">
+                            <param id="0" name="Audio file">coindrop</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;invul&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="949577186451734" type="Audio">
                             <param id="0" name="Audio file">slimecrash_time</param>
@@ -694,11 +819,12 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Play" sid="458371507494165" type="Audio">
-                            <param id="0" name="Audio file">Start_sound_1</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="7" name="Play (by name)" sid="498498524918007" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;coin&quot; &amp; choose(0,1,2,3,4,5)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="528532445727313" type="BonusCandy">
                             <param id="0" name="Object">ScoreParticles</param>
@@ -779,6 +905,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="430897435827683" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="128239358386494" type="System">
                             <param id="0" name="Seconds">random(2,3)</param>
                         </action>
@@ -795,6 +925,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="541041803460004" type="familyCollectibles">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="703459318196745" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>

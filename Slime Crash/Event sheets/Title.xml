@@ -310,21 +310,20 @@
                         <action id="0" name="Play" sid="541025787274865" type="Audio">
                             <param id="0" name="Audio file">slimecrash_ahwordok</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-10</param>
+                            <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;ahwordok&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="933798481509478" type="Audio">
                             <param id="0" name="Audio file">slimecrash_house1</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-20</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="7" name="Play (by name)" sid="968120324531598" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">choose(&quot;birds&quot;,&quot;morningBird5&quot;,&quot;reverseBirds&quot;)</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;birds&quot;</param>
+                        <action id="0" name="Play" sid="427265888172465" type="Audio">
+                            <param id="0" name="Audio file">268080__rbnx__birds-spring-mono-01</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;birds&quot;</param>
                         </action>
                     </actions>
                 </event-block>

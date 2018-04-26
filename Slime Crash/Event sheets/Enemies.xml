@@ -476,7 +476,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="296838292464934" type="enemyBasic">
-                            <param id="0" name="Speed">50 * enemyBasic.speedMultiplier</param>
+                            <param id="0" name="Speed">30 * enemyBasic.speedMultiplier</param>
                         </action>
                     </actions>
                 </event-block>

@@ -4,14 +4,16 @@
     <name>BonusLevel</name>
     <events>
         <variable constant="0" name="SpawnDistance" sid="209767235478497" static="0" type="number">50</variable>
+        <variable constant="0" name="bonusLevelRequirement" sid="527270496625615" static="0" type="number">50</variable>
         <event-block sid="835812654094424">
             <conditions />
             <actions />
         </event-block>
+        <comment></comment>
         <event-block sid="596501058850177">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="744768714399791" type="System">
-                    <param id="0" name="First value">score%150</param>
+                    <param id="0" name="First value">score%bonusLevelRequirement</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
                 </condition>
@@ -28,6 +30,10 @@
                 </action>
                 <action id="-15" name="Set visible" sid="978673343832987" type="BonusBorder">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="505458960195330" type="System">
+                    <param id="0" name="Variable">bonusLevelRequirement</param>
+                    <param id="1" name="Value">bonusLevelRequirement*2</param>
                 </action>
             </actions>
         </event-block>
@@ -77,10 +83,16 @@
                     <param id="0" name="Object to create">BonusCandy</param>
                     <param id="1" name="Layer">&quot;MG&quot;</param>
                     <param id="2" name="X">random(Function.Param(0),Function.Param(1))</param>
-                    <param id="3" name="Y">0</param>
+                    <param id="3" name="Y">-10</param>
                 </action>
                 <action id="-8" name="Set angle" sid="960266118746621" type="BonusCandy">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="956636853051479" type="BonusCandy">
                     <param id="0" name="Angle">random(80,100)</param>
+                </action>
+                <action id="6" name="Set speed" sid="911003073221179" type="BonusCandy">
+                    <param id="0" name="Speed">choose(10,15,20)</param>
                 </action>
             </actions>
         </event-block>

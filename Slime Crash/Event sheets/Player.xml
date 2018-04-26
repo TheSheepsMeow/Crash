@@ -136,7 +136,12 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="104746973086630" type="playerAnimations" />
-                        <action id="-9" name="Destroy" sid="302503685488088" type="relativeControlPoint" />
+                        <action id="11" name="Set collisions enabled" sid="285829092995646" type="player">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="663783104422892" type="player">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="941028603897787">
@@ -150,9 +155,13 @@
                             <param id="2" name="X">playerAnimations.X</param>
                             <param id="3" name="Y">playerAnimations.Y + 15</param>
                         </action>
+                        <action id="-10" name="Set value" sid="580875425881016" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-7" name="Set size" sid="579260387134639" type="bg_flower">
-                            <param id="0" name="Width">0</param>
-                            <param id="1" name="Height">0</param>
+                            <param id="0" name="Width">1</param>
+                            <param id="1" name="Height">1</param>
                         </action>
                         <action id="-12" name="Set group active" sid="285562324125354" type="System">
                             <param id="0" name="Group name">&quot;Flower&quot;</param>
@@ -160,12 +169,32 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="637487070798272">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="408697404718374" type="bg_flower">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="530865867209532" type="bg_flower">
+                            <param id="0" name="Width">lerp(bg_flower.Width,32,0.05)</param>
+                            <param id="1" name="Height">lerp(bg_flower.Height,32,0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" inactive="1" sid="351535493099736" title="Flower">
                     <sub-events>
-                        <event-block sid="528136065187092">
+                        <event-block disabled="1" sid="528136065187092">
                             <conditions>
-                                <condition id="-17" name="Pick top/bottom" sid="103022219615807" type="bg_flower">
+                                <condition disabled="1" id="-17" name="Pick top/bottom" sid="103022219615807" type="bg_flower">
                                     <param id="0" name="Which">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="952228146027286" type="bg_flower">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -233,12 +262,12 @@
                                             <param id="0" name="Mode">1</param>
                                         </action>
                                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="610962910321528" type="playerHelmetDeath">
-                                            <param id="0" name="Impulse">2</param>
-                                            <param id="1" name="Angle">random(0,360)</param>
+                                            <param id="0" name="Impulse">0.5</param>
+                                            <param id="1" name="Angle">angle(player.X, player.Y, familyEnemies.X, familyEnemies.Y) + 180</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
                                         <action behavior="Physics" id="6" name="Apply torque" sid="804229787091670" type="playerHelmetDeath">
-                                            <param id="0" name="Torque">1000</param>
+                                            <param id="0" name="Torque">choose(-10,10)</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="831997405105368" type="playerHelmet" />
                                         <action id="0" name="Spawn another object" sid="564220971800151" type="player">
@@ -371,7 +400,7 @@
                             <param id="2" name="Mode">0</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="481974790650429" type="GameOverBG" />
-                        <action id="-15" name="Set visible" sid="565197105483731" type="menuButtonHome">
+                        <action id="-15" name="Set visible" sid="565197105483731" type="menuButtonPause">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="987329222245509" type="player">
@@ -564,10 +593,10 @@
                             <param id="0" name="Animation">&quot;Death&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="490578072095210" type="playerAnimations">
+                        <action disabled="1" id="-28" name="Set effect parameter" sid="490578072095210" type="playerAnimations">
                             <param id="0" name="Effect">&quot;AdjustHSL&quot;</param>
-                            <param id="1" name="Parameter index">lerp(1,0,0.5)</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">lerp(1,0,0.5)</param>
                         </action>
                     </actions>
                 </event-block>

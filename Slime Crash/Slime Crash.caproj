@@ -2,7 +2,7 @@
 <c2project>
     <name>Slime Crash</name>
     <description></description>
-    <version>0.11</version>
+    <version>0.12</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com/html5/games</author-website>
@@ -96,7 +96,7 @@
                 <plugin id="Spritefont2" />
                 <texture />
             </object-type>
-            <object-type name="menuButtonHome" sid="510581143265345">
+            <object-type name="menuButtonPause" sid="510581143265345">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="838950050915455" speed="5">
@@ -281,6 +281,29 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762062462901977" speed="5">
                         <frame duration="1" hotspotX="-1.812" hotspotY="-1.292" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="thesheepsmeow_logo" sid="742513492157563">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="601622966814184">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997293977129468" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\thesheepsmeow_logo.png">
+                            <collision-poly>
+                                <point x="0.102" y="0.17" />
+                                <point x="0.5" y="0.273333" />
+                                <point x="0.98" y="0.5" />
+                                <point x="0.892" y="0.82" />
+                                <point x="0.5" y="0.821667" />
+                                <point x="0.131" y="0.781667" />
+                                <point x="0.024" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1163,7 +1186,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515919717573964" speed="5">
+                    <animation framecount="13" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515919717573964" speed="20">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1385,6 +1408,9 @@
             </object-type>
             <object-type name="bg_flower" sid="412668711600275">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="id" sid="223099330550126" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383949205810999" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_flower.png">
@@ -1433,6 +1459,11 @@
                         <behavior id="Sin" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="AdjustHSL">
+                        <effect id="hsladjust" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219309001768076" speed="5">
                         <frame duration="1" hotspotX="0.502058" hotspotY="0.502041" original-source="C:\Users\Valencio\Desktop\bushes.png">
@@ -1555,29 +1586,6 @@
         <object-type name="Keyboard" sid="357741363397634">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="thesheepsmeow_logo" sid="742513492157563">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="601622966814184">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997293977129468" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\thesheepsmeow_logo.png">
-                        <collision-poly>
-                            <point x="0.102" y="0.17" />
-                            <point x="0.5" y="0.273333" />
-                            <point x="0.98" y="0.5" />
-                            <point x="0.892" y="0.82" />
-                            <point x="0.5" y="0.821667" />
-                            <point x="0.131" y="0.781667" />
-                            <point x="0.024" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="familyEnemies" plugin-id="Sprite" sid="560648736051635">
@@ -1698,16 +1706,27 @@
         <file name="slimecrash_house5.ogg" />
         <file name="slimecrash_time.m4a" />
         <file name="slimecrash_time.ogg" />
-        <file name="birds.m4a" />
-        <file name="birds.ogg" />
-        <file name="morningBird5.m4a" />
-        <file name="morningBird5.ogg" />
-        <file name="reverseBirds.m4a" />
-        <file name="reverseBirds.ogg" />
         <file name="pooping.m4a" />
         <file name="pooping.ogg" />
+        <file name="coin0.m4a" />
+        <file name="coin0.ogg" />
+        <file name="coin1.m4a" />
+        <file name="coin1.ogg" />
+        <file name="coin2.m4a" />
+        <file name="coin2.ogg" />
+        <file name="coin3.m4a" />
+        <file name="coin3.ogg" />
+        <file name="coin4.m4a" />
+        <file name="coin4.ogg" />
+        <file name="coin5.m4a" />
+        <file name="coin5.ogg" />
+        <file name="coindrop.m4a" />
+        <file name="coindrop.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="268080__rbnx__birds-spring-mono-01.m4a" />
+        <file name="268080__rbnx__birds-spring-mono-01.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
