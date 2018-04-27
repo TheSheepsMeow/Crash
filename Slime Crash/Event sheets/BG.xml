@@ -136,6 +136,59 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="445924778841027" title="Rustle Bushes">
+            <sub-events>
+                <event-block sid="586802146339576">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="658107278675855">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="639631441267578" type="familyEnemies">
+                            <param id="0" name="Object">Bg_Plant</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="755738245335911" type="familyEnemies">
+                            <param id="0" name="Instance variable">rustled</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="1" name="Set period" sid="787768818601906" type="Bg_Plant">
+                            <param id="0" name="Period">0.2</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="900482840352312" type="Bg_Plant">
+                            <param id="0" name="Magnitude">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="287116201404195" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="965126380406304" type="Bg_Plant">
+                            <param id="0" name="Period">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="2" name="Set magnitude" sid="594521043609444" type="Bg_Plant">
+                            <param id="0" name="Magnitude">0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="521710396415015" type="familyEnemies">
+                            <param id="0" name="Instance variable">rustled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="654040669688137">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="512421792471939">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="963397962213161">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="855096975745809">
             <conditions />
             <actions />
