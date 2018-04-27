@@ -279,7 +279,7 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="415611204942722" type="familyEnemies">
                                     <param id="0" name="Object">HitParticles</param>
-                                    <param id="1" name="Layer">&quot;FX&quot;</param>
+                                    <param id="1" name="Layer">&quot;BG&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action disabled="1" id="-9" name="Destroy" sid="157434621767423" type="familyEnemies" />
@@ -313,24 +313,10 @@
         <event-group description="" sid="194007645959352" title="Player Death">
             <sub-events>
                 <comment>player death</comment>
-                <event-block disabled="1" sid="135312170530350">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="909246413441973" type="playerAnimations">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Stop" sid="434485444929286" type="playerAnimations" />
-                    </actions>
-                </event-block>
                 <event-block sid="468074865505678">
                     <conditions>
                         <condition id="2" name="Is playing" sid="632449692503165" type="playerAnimations">
                             <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                        <condition disabled="1" id="3" name="Compare frame" sid="377172630849828" type="playerAnimations">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">1</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="481652017671382" type="System" />
                     </conditions>
@@ -342,6 +328,14 @@
                         <action id="-15" name="Set visible" sid="363716842698325" type="player">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="357203500195719" type="textTips">
+                            <param id="0" name="Pin to">titleBG</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="393790475677820" type="titleButton">
+                            <param id="0" name="Pin to">titleBG</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="269313799134603">
@@ -351,7 +345,7 @@
                     <actions>
                         <action id="-3" name="Create object" sid="934862649051820" type="System">
                             <param id="0" name="Object to create">bg_flower</param>
-                            <param id="1" name="Layer">&quot;GameOver&quot;</param>
+                            <param id="1" name="Layer">&quot;FG&quot;</param>
                             <param id="2" name="X">playerAnimations.X</param>
                             <param id="3" name="Y">playerAnimations.Y + 15</param>
                         </action>
@@ -363,9 +357,31 @@
                             <param id="0" name="Width">1</param>
                             <param id="1" name="Height">1</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="186273944787558" type="System">
-                            <param id="0" name="Group name">&quot;Flower&quot;</param>
-                            <param id="1" name="State">1</param>
+                        <action id="-14" name="Set object time scale" sid="275238007975288" type="System">
+                            <param id="0" name="Object">titleBG</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="893451693845525" type="System">
+                            <param id="0" name="Object">titleButton</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="838449152234944" type="System">
+                            <param id="0" name="Object">textTips</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="421239140532463" type="titleBG">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="285136780743627" type="PhysicsWall">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" disabled="1" id="5" name="Apply impulse at angle" sid="264828060637750" type="titleBG">
+                            <param id="0" name="Impulse">10</param>
+                            <param id="1" name="Angle">random(75, 95)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="788376563142332" type="titleBG">
+                            <param id="0" name="Gravity">100</param>
                         </action>
                     </actions>
                 </event-block>
@@ -403,7 +419,7 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="142882303495020" type="player">
                             <param id="0" name="Object">HitParticles</param>
-                            <param id="1" name="Layer">&quot;FX&quot;</param>
+                            <param id="1" name="Layer">&quot;BG&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="0" name="Play" sid="816963254056714" type="Audio">
@@ -429,7 +445,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;slimecrash_house&quot; &amp; choose(4,5)</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-5</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="934846592401543" type="System">
