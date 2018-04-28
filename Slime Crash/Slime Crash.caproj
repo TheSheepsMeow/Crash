@@ -69,7 +69,7 @@
         <object-folder name="menus">
             <object-type name="textDebug" sid="181987934528450">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\GJ Lee\Desktop\1234.png" />
             </object-type>
             <object-type name="loaderProgress" sid="229428727829331">
                 <plugin id="NinePatch" />
@@ -111,13 +111,13 @@
             </object-type>
             <object-type name="textTitle" sid="393181214277166">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\GJ Lee\Desktop\1234.png" />
             </object-type>
             <object-type name="menuButtonPause" sid="510581143265345">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="838950050915455" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\pause.png">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\GJ Lee\Desktop\SC_pause1.png">
                             <collision-poly>
                                 <point x="0.171875" y="0.171875" />
                                 <point x="0.5" y="0.03125" />
@@ -131,7 +131,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="727750453097962" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\GJ Lee\Desktop\SC_pause0.png">
                             <collision-poly>
                                 <point x="0.171875" y="0.171875" />
                                 <point x="0.5" y="0.03125" />
@@ -150,23 +150,55 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="unmuted" pingpong="0" repeatcount="1" repeatto="0" sid="639706422790771" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\mute.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506667" original-source="C:\Users\GJ Lee\Desktop\SC_unmute.png">
+                            <collision-poly>
+                                <point x="0.157895" y="0.16" />
+                                <point x="0.5" y="0.0133333" />
+                                <point x="0.842105" y="0.16" />
+                                <point x="0.986842" y="0.493333" />
+                                <point x="0.855263" y="0.853333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.144737" y="0.853333" />
+                                <point x="0.0131579" y="0.493333" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="muted" pingpong="0" repeatcount="1" repeatto="0" sid="291172181559818" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\mute1.png" />
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\GJ Lee\Desktop\SC_mute.png">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.493333" y="0.0133333" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="1" y="0.493333" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.493333" y="1" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0" y="0.493333" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="menuButtonReset" sid="843249760384101">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538844254891279" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset1.png" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538844254891279" speed="0">
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.511628" original-source="C:\Users\GJ Lee\Desktop\Artboard 35.png">
+                            <collision-poly>
+                                <point x="0.0235294" y="0.0465116" />
+                                <point x="0.494118" y="0" />
+                                <point x="0.976471" y="0.0465116" />
+                                <point x="1" y="0.488372" />
+                                <point x="0.976471" y="0.953488" />
+                                <point x="0.494118" y="0.976744" />
+                                <point x="0.0352941" y="0.930233" />
+                                <point x="0" y="0.488372" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="621875177566197" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="C:\Users\GJ Lee\Desktop\Artboard 34.png" />
+                        <frame duration="1" hotspotX="0.505882" hotspotY="0.511628" original-source="C:\Users\GJ Lee\Desktop\Artboard 35.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -202,11 +234,11 @@
             </object-type>
             <object-type name="textResetScores" sid="441130440139428">
                 <plugin id="Spritefont2" />
-                <texture />
+                <texture original-source="C:\Users\GJ Lee\Desktop\1234.png" />
             </object-type>
             <object-type name="moregames" sid="206689007778686">
                 <plugin id="NinePatch" />
-                <texture />
+                <texture original-source="C:\Users\GJ Lee\Desktop\Artboard 35.png" />
             </object-type>
             <object-type name="endBG" sid="134682888354773">
                 <plugin id="TiledBg" />
@@ -246,13 +278,33 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="446442489103169" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\home.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\home1.png" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="446442489103169" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503546" original-source="C:\Users\GJ Lee\Desktop\SC_ homePressed.png">
+                            <collision-poly>
+                                <point x="0.025" y="0.0638298" />
+                                <point x="0.5" y="0" />
+                                <point x="0.975" y="0.0638298" />
+                                <point x="1" y="0.496454" />
+                                <point x="0.975" y="0.93617" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0277778" y="0.929078" />
+                                <point x="0" y="0.496454" />
+                            </collision-poly>
+                        </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="413823955303410" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\homepress.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\homepress1.png" />
+                    <animation framecount="1" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="413823955303410" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503546" original-source="C:\Users\GJ Lee\Desktop\SC_ homePressed.png">
+                            <collision-poly>
+                                <point x="0.025" y="0.0638298" />
+                                <point x="0.5" y="0" />
+                                <point x="0.975" y="0.0638298" />
+                                <point x="1" y="0.496454" />
+                                <point x="0.975" y="0.93617" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0277778" y="0.929078" />
+                                <point x="0" y="0.496454" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1418,7 +1470,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262837690095068" speed="5">
-                        <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\SC_dirt.png">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\stones.png">
                             <collision-poly>
                                 <point x="0.129032" y="0.222222" />
                                 <point x="0.483871" y="0" />
@@ -1459,7 +1511,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="114607222947448" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\sc_bgGrass.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\asd.png">
+                            <collision-poly>
+                                <point x="0.625" y="0.625" />
+                                <point x="0.5" y="0.78125" />
+                                <point x="0.40625" y="0.59375" />
+                                <point x="0.8125" y="0.8125" />
+                                <point x="0.5" y="1" />
+                                <point x="0.1875" y="0.8125" />
+                            </collision-poly>
+                        </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\GJ Lee\Desktop\sc_grass.png">
                             <collision-poly>
                                 <point x="0.129032" y="0.222222" />
@@ -1477,7 +1538,7 @@
             </object-type>
             <object-type name="bg_grassTile" sid="478972567893016">
                 <plugin id="TiledBg" />
-                <texture original-source="C:\Users\GJ Lee\Desktop\plaingrass.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\grass.png" />
             </object-type>
             <object-type name="Bg_Plant" sid="146793231683825">
                 <plugin id="Sprite" />

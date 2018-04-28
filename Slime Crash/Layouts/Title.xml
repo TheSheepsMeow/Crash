@@ -100,13 +100,13 @@
                         <x>240</x>
                         <y>48</y>
                         <z>0</z>
-                        <width>18.184242249</width>
+                        <width>20.530595779</width>
                         <height>14.078123093</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="87">
@@ -122,13 +122,13 @@
                         <x>0</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>31</width>
+                        <width>35</width>
                         <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="88">
@@ -144,13 +144,13 @@
                         <x>64</x>
                         <y>112</y>
                         <z>0</z>
-                        <width>31</width>
+                        <width>35</width>
                         <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="89">
@@ -166,13 +166,13 @@
                         <x>297.385406494</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>18.184242249</width>
+                        <width>20.530595779</width>
                         <height>14.078123093</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="90">
@@ -188,13 +188,13 @@
                         <x>192</x>
                         <y>16</y>
                         <z>0</z>
-                        <width>36.368484497</width>
+                        <width>41.061191559</width>
                         <height>28.156246185</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="91">
@@ -210,13 +210,13 @@
                         <x>192</x>
                         <y>256</y>
                         <z>0</z>
-                        <width>36.368484497</width>
+                        <width>41.061191559</width>
                         <height>28.156246185</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="92">
@@ -232,13 +232,13 @@
                         <x>54.614585876</x>
                         <y>369.921875</y>
                         <z>0</z>
-                        <width>18.184242249</width>
+                        <width>20.530595779</width>
                         <height>14.078123093</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="93">
@@ -254,13 +254,13 @@
                         <x>131.887573242</x>
                         <y>400</y>
                         <z>0</z>
-                        <width>25.716402054</width>
+                        <width>29.034646988</width>
                         <height>19.909471512</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_dirt" uid="94">
@@ -276,13 +276,13 @@
                         <x>294.989471436</x>
                         <y>378.484222412</y>
                         <z>0</z>
-                        <width>44.542118073</width>
+                        <width>50.289489746</width>
                         <height>34.484218597</height>
                         <depth>0</depth>
-                        <hotspotX>0.516129017</hotspotX>
+                        <hotspotX>0.514285743</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.850000024</opacity>
                     </world>
                 </instance>
                 <instance type="bg_grass" uid="95">
@@ -977,6 +977,144 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Bg_Plant" uid="132">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>334.455383301</x>
+                        <y>63.401916504</y>
+                        <z>0</z>
+                        <width>142.523025513</width>
+                        <height>143.696075439</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.646114707</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="133">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-7.693435669</x>
+                        <y>344.393920898</y>
+                        <z>0</z>
+                        <width>142.523025513</width>
+                        <height>143.696075439</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.646114707</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bg_Plant" uid="134">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Angle</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>2</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>1</period-offset-random>
+                                <magnitude>0.5</magnitude>
+                                <magnitude-random>0.5</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>336.108398438</x>
+                        <y>441.088134766</y>
+                        <z>0</z>
+                        <width>142.523025513</width>
+                        <height>143.696075439</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502057612</hotspotX>
+                        <hotspotY>0.502040803</hotspotY>
+                        <angle>0.646114707</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1007,15 +1145,15 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>249.04699707</x>
-                        <y>80.994628906</y>
+                        <y>75.943870544</y>
                         <z>0</z>
-                        <width>72</width>
-                        <height>36</height>
+                        <width>85</width>
+                        <height>33.128067017</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.505882382</hotspotX>
+                        <hotspotY>0.511627913</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="titleBG" uid="12">
@@ -1112,8 +1250,8 @@
                 </instance>
                 <instance type="textTitle" uid="16">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>chase the candy</text>
                         <scale>0.5</scale>
@@ -1129,10 +1267,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>256</y>
+                        <y>255.375854492</y>
                         <z>0</z>
                         <width>306</width>
-                        <height>16</height>
+                        <height>22.993041992</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1146,8 +1284,8 @@
                         <right-margin>16</right-margin>
                         <top-margin>16</top-margin>
                         <bottom-margin>16</bottom-margin>
-                        <edges>Tile</edges>
-                        <fill>Tile</fill>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
@@ -1163,16 +1301,16 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
+                        <opacity>0.800000012</opacity>
                     </world>
                 </instance>
                 <instance type="textTitle" uid="17">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>MORE GAMES</text>
-                        <scale>1.25</scale>
+                        <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -1184,7 +1322,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
+                        <x>167.465026855</x>
                         <y>455.053833008</y>
                         <z>0</z>
                         <width>228.385467529</width>
@@ -1209,11 +1347,11 @@
                         <x>31.800628662</x>
                         <y>31.800628662</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
+                        <width>57</width>
+                        <height>56.25</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.50666666</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1280,11 +1418,11 @@
                 </instance>
                 <instance type="textResetScores" uid="42">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>reset scores</text>
-                        <scale>0.5</scale>
+                        <scale>0.25</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -1297,7 +1435,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>250.042572021</x>
-                        <y>82.509353638</y>
+                        <y>76.566772461</y>
                         <z>0</z>
                         <width>68.13822937</width>
                         <height>21</height>
@@ -1329,11 +1467,11 @@
             <instances>
                 <instance type="textDebug" uid="10">
                     <properties>
-                        <character-width>16</character-width>
-                        <character-height>16</character-height>
+                        <character-width>22</character-width>
+                        <character-height>36</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>0.4</scale>
+                        <scale>0.3</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
