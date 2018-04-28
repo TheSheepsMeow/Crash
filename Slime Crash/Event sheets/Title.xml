@@ -109,7 +109,7 @@
                 </event-block>
                 <event-block sid="941754323102317">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="106314650565553" type="Touch">
+                        <condition id="3" name="On touched object" sid="106314650565553" type="Touch">
                             <param id="0" name="Object">menuButton</param>
                         </condition>
                         <condition id="5" inverted="1" name="Is tag playing" sid="168796804809061" type="Audio">
@@ -155,7 +155,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="631239287198359" type="menuButton">
+                        <action disabled="1" id="4" name="Set animation" sid="631239287198359" type="menuButton">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
